@@ -14,7 +14,7 @@
 
 ---
 
-## 🎯 Current Focus
+## <img src="https://user-images.githubusercontent.com/74038190/216122069-5b8169d7-1d8e-4a13-b245-a8e4176c99f8.png" width="32" alt="target" /> &nbsp;Current Focus
 
 My end-to-end workflow when I build a computer-vision project:
 
@@ -39,7 +39,7 @@ flowchart LR
 
 ---
 
-## About Me
+## <img src="https://user-images.githubusercontent.com/74038190/216120986-f2752ca9-fe82-4aa3-befe-0a58db010d85.png" width="32" alt="smiling face" /> &nbsp;About Me
 
 ```yaml
 name:      Amir
@@ -61,7 +61,7 @@ motto:     "every great story starts with 'i lost everything.'"
 
 ---
 
-## <img src="https://user-images.githubusercontent.com/74038190/213866269-5d00981c-7c98-46d7-8a8e-16f462f15227.gif" width="30" /> Tech Stack
+## <img src="https://user-images.githubusercontent.com/74038190/216122028-c05b52fb-983e-4ee8-8811-6f30cd9ea5d5.png" width="32" alt="comet" /> &nbsp;Tech Stack
 
 <div align="center">
 
@@ -97,12 +97,9 @@ motto:     "every great story starts with 'i lost everything.'"
 
 ---
 
-## <img src="https://user-images.githubusercontent.com/74038190/213866269-5d00981c-7c98-46d7-8a8e-16f462f15227.gif" width="30" /> GitHub Stats
+## <img src="https://user-images.githubusercontent.com/74038190/216122041-518ac897-8d92-4c6b-9b3f-ca01dcaf38ee.png" width="32" alt="fire" /> &nbsp;GitHub Stats
 
 <div align="center">
-
-<img height="170" src="https://github-readme-stats.vercel.app/api?username=Amir1ted&show_icons=true&hide_border=true&count_private=true&bg_color=0D1117&title_color=B16CEA&icon_color=8A2BE2&text_color=C9D1D9" />
-<img height="170" src="https://github-readme-stats.vercel.app/api/top-langs/?username=Amir1ted&layout=compact&hide_border=true&bg_color=0D1117&title_color=B16CEA&text_color=C9D1D9" />
 
 <img height="170" src="https://github-readme-streak-stats.herokuapp.com/?user=Amir1ted&hide_border=true&background=0D1117&stroke=302B63&ring=B16CEA&fire=8A2BE2&currStreakLabel=B16CEA&sideLabels=C9D1D9&dates=8B949E&sideNums=C9D1D9&currStreakNum=C9D1D9" />
 
@@ -116,7 +113,7 @@ motto:     "every great story starts with 'i lost everything.'"
 
 ---
 
-## 💬 Dev Quote
+## <img src="https://user-images.githubusercontent.com/74038190/216120974-24a76b31-7f39-41f1-a38f-b3c1377cc612.png" width="32" alt="teacup" /> &nbsp;Dev Quote
 
 <div align="center">
 
