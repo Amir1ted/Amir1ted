@@ -1,8 +1,12 @@
 <div align="center">
 
-<img src="https://capsule-render.vercel.app/api?type=waving&color=0:0f0c29,50:302b63,100:24243e&height=200&section=header&text=AMIR&fontSize=72&fontColor=b16cea&animation=fadeIn&fontAlignY=36&desc=Python%20Developer%20%7C%20AI%20%C2%B7%20ML%20%C2%B7%20Computer%20Vision&descAlignY=58&descSize=16" width="100%" />
+<img src="https://capsule-render.vercel.app/api?type=waving&color=0:0f0c29,50:302b63,100:24243e&height=200&section=header&text=AMIR&fontSize=72&fontColor=b16cea&animation=fadeIn&fontAlignY=36&desc=Python%20%C2%B7%20AI%20%C2%B7%20Machine%20Learning%20%C2%B7%20Computer%20Vision&descAlignY=58&descSize=16" width="100%" />
 
-<img src="https://readme-typing-svg.demolab.com?font=Fira+Code&weight=600&size=22&pause=900&color=B16CEA&center=true&vCenter=true&width=620&lines=Python+Developer;AI+%26+Machine+Learning+Enthusiast;Computer+Vision+Explorer;Computer+Engineering+Student;Ubuntu+%2F+Linux+Lover" />
+<a href="https://github.com/Amir1ted">
+  <img src="https://readme-typing-svg.demolab.com?font=Fira+Code&weight=700&size=26&pause=800&duration=2600&color=B16CEA&background=00000000&center=true&vCenter=true&width=760&height=52&lines=%3E+import+torch%2C+cv2%2C+dreams;%3E+teaching+machines+to+see+%F0%9F%91%81;%3E+training+neurons%2C+not+habits;%3E+Computer+Engineering+%40+Iran;%3E+Ubuntu+is+my+comfort+zone+%F0%9F%90%A7" alt="typing" />
+</a>
+
+<img src="https://readme-typing-svg.demolab.com?font=Fira+Code&size=15&pause=1200&duration=3500&color=8A8FFF&background=00000000&center=true&vCenter=true&width=700&height=34&lines=every+great+story+starts+with+%22i+lost+everything.%22" alt="quote" />
 
 <img src="https://komarev.com/ghpvc/?username=Amir1ted&label=PROFILE+VIEWS&color=8a2be2&style=for-the-badge" />
 
@@ -13,29 +17,32 @@
 <div align="center">
 
 ```
-                    A M I R   ·   N E U R A L   N E T
+        INPUT              HIDDEN              OUTPUT
 
-        (o).. .. .. .. .. .. .(o).. .. .. .. .. .. .(o)
-            . .. .. .. .. ..      . .. .. .. .. ..
-               . .. ..  . .. .(o).. .. .. .. .. .
-              .. .. .. .. ..        .. .. .. .. .. .(o)
-        (o).. .. .. .. .. .. .(o).. .. .. .. .. ..
-              .. .. .. .. ..        .. .. .. .. .. .(o)
-               . .. ..  . .. .(o).. .. .. .. .. .
-            . .. .. .. .. ..      . .. .. .. .. ..
-        (o).. .. .. .. .. .. .(o).. .. .. .. .. .. .(o)
+     (*)---                         ---(*)
+         \-----                 -----/
+          \\   -----       -----   //
+            \\     ---(*)---     //
+             \\-----/     \-----//
+          -----\\ //       \\ //-----
+     (*)---     \\           \\     ---(*)
+          -----// \\       // \\-----
+             //----\\     //----\\
+            //     --\(*)/--     \\
+          //   -----       -----   \\
+         //----                 ----\\
+     (*)/--                         --\(*)
 
-         input            hidden layers           output
-         pixels          convolutions           predictions
+       pixels            features         predictions
 ```
 
-<i>every great story starts with “i lost everything.”</i>
+<sub>`forward()` → `loss.backward()` → `optimizer.step()` → repeat</sub>
 
 </div>
 
 ---
 
-## <img src="https://media.giphy.com/media/iY8CRBdQXODJSCERIr/giphy.gif" width="28"> About Me
+## About Me
 
 ```yaml
 name:      Amir
@@ -57,7 +64,7 @@ motto:     "every great story starts with 'i lost everything.'"
 
 ---
 
-## <img src="https://media.giphy.com/media/W5eoZHPpUx9sy7cWQi/giphy.gif" width="28"> Tech Stack
+## ⚙️ Tech Stack
 
 <div align="center">
 
@@ -87,13 +94,13 @@ motto:     "every great story starts with 'i lost everything.'"
 ![Docker](https://img.shields.io/badge/Docker-0F0C29?style=for-the-badge&logo=docker&logoColor=B16CEA)
 ![Ubuntu](https://img.shields.io/badge/Ubuntu-0F0C29?style=for-the-badge&logo=ubuntu&logoColor=B16CEA)
 ![Linux](https://img.shields.io/badge/Linux-0F0C29?style=for-the-badge&logo=linux&logoColor=B16CEA)
-![GNU Bash](https://img.shields.io/badge/Bash-0F0C29?style=for-the-badge&logo=gnubash&logoColor=B16CEA)
+![Bash](https://img.shields.io/badge/Bash-0F0C29?style=for-the-badge&logo=gnubash&logoColor=B16CEA)
 
 </div>
 
 ---
 
-## <img src="https://media.giphy.com/media/dWesBcTLavkZuG35MI/giphy.gif" width="28"> GitHub Stats
+## 📊 GitHub Stats
 
 <div align="center">
 
@@ -110,10 +117,12 @@ motto:     "every great story starts with 'i lost everything.'"
 
 ---
 
-## <img src="https://media.giphy.com/media/LnQjpWaON8nhr21vNW/giphy.gif" width="28"> Contribution Snake
+## 💬 Dev Quote
 
 <div align="center">
-<img src="https://raw.githubusercontent.com/Amir1ted/Amir1ted/output/snake.svg" alt="contribution snake" />
+
+<img src="https://quotes-github-readme.vercel.app/api?type=horizontal&theme=radical" />
+
 </div>
 
 ---
