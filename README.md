@@ -2,11 +2,11 @@
 
 <img src="https://capsule-render.vercel.app/api?type=waving&color=0:0f0c29,50:302b63,100:24243e&height=200&section=header&text=AMIR&fontSize=72&fontColor=b16cea&animation=fadeIn&fontAlignY=36&desc=Python%20%C2%B7%20AI%20%C2%B7%20Machine%20Learning%20%C2%B7%20Computer%20Vision&descAlignY=58&descSize=16" width="100%" />
 
-<a href="https://github.com/Amir1ted">
-  <img src="https://readme-typing-svg.demolab.com?font=Fira+Code&weight=700&size=26&pause=800&duration=2600&color=B16CEA&background=00000000&center=true&vCenter=true&width=760&height=52&lines=%3E+import+torch%2C+cv2%2C+dreams;%3E+teaching+machines+to+see+%F0%9F%91%81;%3E+training+neurons%2C+not+habits;%3E+Computer+Engineering+%40+Iran;%3E+Ubuntu+is+my+comfort+zone+%F0%9F%90%A7" alt="typing" />
-</a>
+# Hey there <img src="https://raw.githubusercontent.com/MartinHeinz/MartinHeinz/master/wave.gif" width="32px" />
 
-<img src="https://readme-typing-svg.demolab.com?font=Fira+Code&size=15&pause=1200&duration=3500&color=8A8FFF&background=00000000&center=true&vCenter=true&width=700&height=34&lines=every+great+story+starts+with+%22i+lost+everything.%22" alt="quote" />
+<a href="https://github.com/Amir1ted">
+  <img src="https://readme-typing-svg.demolab.com?font=JetBrains+Mono&weight=600&size=21&pause=1200&duration=3200&color=B16CEA&background=0D1117&center=true&vCenter=true&multiline=false&width=800&height=64&lines=%3E+my+code+doesn't+have+bugs%2C+it+has+undocumented+features;%3E+it+works+on+my+machine+%C2%AF%5C_(%E3%83%84)_%2F%C2%AF;%3E+99+little+bugs+in+the+code...+127+little+bugs+in+the+code;%3E+!false+%E2%80%94+it's+funny+because+it's+true;%3E+2+hard+things+in+CS%3A+cache+invalidation+and+naming+things;%3E+there+are+10+types+of+people%3A+those+who+read+binary" alt="programming jokes" />
+</a>
 
 <img src="https://komarev.com/ghpvc/?username=Amir1ted&label=PROFILE+VIEWS&color=8a2be2&style=for-the-badge" />
 
@@ -14,31 +14,28 @@
 
 ---
 
-<div align="center">
+## 🎯 Current Focus
 
-```
-        INPUT              HIDDEN              OUTPUT
+My end-to-end workflow when I build a computer-vision project:
 
-     (*)---                         ---(*)
-         \-----                 -----/
-          \\   -----       -----   //
-            \\     ---(*)---     //
-             \\-----/     \-----//
-          -----\\ //       \\ //-----
-     (*)---     \\           \\     ---(*)
-          -----// \\       // \\-----
-             //----\\     //----\\
-            //     --\(*)/--     \\
-          //   -----       -----   \\
-         //----                 ----\\
-     (*)/--                         --\(*)
-
-       pixels            features         predictions
+```mermaid
+%%{init: {'theme':'dark','themeVariables':{'primaryColor':'#302b63','primaryTextColor':'#ffffff','primaryBorderColor':'#b16cea','lineColor':'#b16cea','secondaryColor':'#24243e','tertiaryColor':'#0f0c29','fontFamily':'JetBrains Mono'}}}%%
+flowchart LR
+    A[📷 Data<br/>images / video] --> B[🧹 Preprocess<br/>OpenCV · NumPy]
+    B --> C[🧠 Train<br/>PyTorch · TensorFlow]
+    C --> D[🎯 Detect<br/>YOLO · CNNs]
+    D --> E[📈 Evaluate<br/>metrics · tuning]
+    E --> F[🚀 Ship<br/>Docker · Linux]
+    F -.-> A
 ```
 
-<sub>`forward()` → `loss.backward()` → `optimizer.step()` → repeat</sub>
-
-</div>
+| Area | What I'm doing | Status |
+| :--- | :--- | :--- |
+| 👁️ **Computer Vision** | Detection, tracking, image understanding | `in progress` |
+| 🧠 **Deep Learning** | CNNs, transfer learning, model tuning | `in progress` |
+| 📚 **Classic ML** | scikit-learn pipelines, feature engineering | `solid` |
+| 🐍 **Python** | Clean, reproducible, well-structured code | `daily driver` |
+| 🐧 **Linux / Docker** | Reproducible environments, automation | `improving` |
 
 ---
 
@@ -64,7 +61,7 @@ motto:     "every great story starts with 'i lost everything.'"
 
 ---
 
-## ⚙️ Tech Stack
+## <img src="https://user-images.githubusercontent.com/74038190/213866269-5d00981c-7c98-46d7-8a8e-16f462f15227.gif" width="30" /> Tech Stack
 
 <div align="center">
 
@@ -100,18 +97,20 @@ motto:     "every great story starts with 'i lost everything.'"
 
 ---
 
-## 📊 GitHub Stats
+## <img src="https://user-images.githubusercontent.com/74038190/213866269-5d00981c-7c98-46d7-8a8e-16f462f15227.gif" width="30" /> GitHub Stats
 
 <div align="center">
 
 <img height="170" src="https://github-readme-stats.vercel.app/api?username=Amir1ted&show_icons=true&hide_border=true&count_private=true&bg_color=0D1117&title_color=B16CEA&icon_color=8A2BE2&text_color=C9D1D9" />
 <img height="170" src="https://github-readme-stats.vercel.app/api/top-langs/?username=Amir1ted&layout=compact&hide_border=true&bg_color=0D1117&title_color=B16CEA&text_color=C9D1D9" />
 
-<img height="170" src="https://streak-stats.demolab.com?user=Amir1ted&hide_border=true&background=0D1117&stroke=302B63&ring=B16CEA&fire=8A2BE2&currStreakLabel=B16CEA&sideLabels=C9D1D9&dates=8B949E&sideNums=C9D1D9&currStreakNum=C9D1D9" />
+<img height="170" src="https://github-readme-streak-stats.herokuapp.com/?user=Amir1ted&hide_border=true&background=0D1117&stroke=302B63&ring=B16CEA&fire=8A2BE2&currStreakLabel=B16CEA&sideLabels=C9D1D9&dates=8B949E&sideNums=C9D1D9&currStreakNum=C9D1D9" />
 
-<img src="https://github-profile-trophy.vercel.app/?username=Amir1ted&theme=nord&no-frame=true&no-bg=true&column=7&margin-w=6&margin-h=6" />
+<img height="170" src="https://github-profile-summary-cards.vercel.app/api/cards/repos-per-language?username=Amir1ted&theme=github_dark" />
+<img height="170" src="https://github-profile-summary-cards.vercel.app/api/cards/most-commit-language?username=Amir1ted&theme=github_dark" />
 
-<img src="https://github-readme-activity-graph.vercel.app/graph?username=Amir1ted&bg_color=0D1117&color=B16CEA&line=8A2BE2&point=C9D1D9&area=true&hide_border=true" width="95%" />
+<img height="170" src="https://github-profile-summary-cards.vercel.app/api/cards/stats?username=Amir1ted&theme=github_dark" />
+<img height="170" src="https://github-profile-summary-cards.vercel.app/api/cards/productive-time?username=Amir1ted&theme=github_dark&utcOffset=3.5" />
 
 </div>
 
