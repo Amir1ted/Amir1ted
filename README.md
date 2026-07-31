@@ -29,14 +29,6 @@ flowchart LR
     F -.-> A
 ```
 
-| Area | What I'm doing | Status |
-| :--- | :--- | :--- |
-| 👁️ **Computer Vision** | Detection, tracking, image understanding | `in progress` |
-| 🧠 **Deep Learning** | CNNs, transfer learning, model tuning | `in progress` |
-| 📚 **Classic ML** | scikit-learn pipelines, feature engineering | `solid` |
-| 🐍 **Python** | Clean, reproducible, well-structured code | `daily driver` |
-| 🐧 **Linux / Docker** | Reproducible environments, automation | `improving` |
-
 ---
 
 ## <img src="https://user-images.githubusercontent.com/74038190/216120986-f2752ca9-fe82-4aa3-befe-0a58db010d85.png" width="32" alt="smiling face" /> &nbsp;About Me
