@@ -41,15 +41,7 @@ focus:     Artificial Intelligence · Machine Learning · Computer Vision
 language:  Python (main)
 os:        Ubuntu Linux
 learning:  Computer Vision — deep dive
-motto:     "every great story starts with 'i lost everything.'"
 ```
-
-- 🧠 &nbsp;Python developer focused on **AI, Machine Learning and Computer Vision**
-- 👁️ &nbsp;Currently going deep into **Computer Vision** — detection, tracking and image understanding
-- 🐧 &nbsp;**Linux enthusiast**, living inside **Ubuntu** and the terminal
-- 🧪 &nbsp;I like turning research papers and ideas into working code
-- 🎓 &nbsp;**Computer Engineering** student — hardware intuition, software obsession
-- ⚡ &nbsp;Always building, always breaking, always learning
 
 ---
 
