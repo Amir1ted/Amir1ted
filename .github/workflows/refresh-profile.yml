@@ -1,0 +1,92 @@
+name: Refresh Monochrome Profile
+
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: "17 1 * * *"
+  push:
+    branches: [main]
+    paths:
+      - "README.md"
+      - "scripts/**"
+      - "assets/header.svg"
+      - "assets/identity.svg"
+      - "assets/tech-stack.svg"
+      - "assets/neural-skill-atlas.svg"
+      - ".github/workflows/refresh-profile.yml"
+
+permissions:
+  contents: write
+
+concurrency:
+  group: refresh-profile-${{ github.repository }}
+  cancel-in-progress: true
+
+jobs:
+  refresh:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v5
+
+      - name: Generate GitHub stats and contribution graph
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          GITHUB_USERNAME: ${{ github.repository_owner }}
+        run: python scripts/generate_profile_data.py
+
+      - name: Generate monochrome contribution snake
+        uses: Platane/snk/svg-only@v3
+        with:
+          github_user_name: ${{ github.repository_owner }}
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          outputs: >-
+            assets/contribution-snake.svg?color_snake=%23f2f2f2&color_dots=%23090909,%23272727,%23505050,%23909090,%23efefef
+
+      - name: Generate 3D contribution views
+        uses: yoshi389111/github-profile-3d-contrib@latest
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          USERNAME: ${{ github.repository_owner }}
+
+      - name: Convert selected 3D views to monochrome
+        run: |
+          python scripts/monochrome_3d.py \
+            profile-3d-contrib/profile-season-animate.svg \
+            profile-3d-contrib/profile-night-view.svg
+
+      - name: Validate generated SVGs
+        run: |
+          python - <<'PY'
+          import xml.etree.ElementTree as ET
+          from pathlib import Path
+          paths = [
+              Path("assets/github-stats.svg"),
+              Path("assets/contribution-graph.svg"),
+              Path("assets/contribution-snake.svg"),
+              Path("profile-3d-contrib/profile-season-animate.svg"),
+              Path("profile-3d-contrib/profile-night-view.svg"),
+          ]
+          for path in paths:
+              ET.parse(path)
+              print("valid:", path)
+          PY
+
+      - name: Commit all refreshed profile assets once
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add \
+            assets/github-stats.svg \
+            assets/contribution-graph.svg \
+            assets/contribution-snake.svg \
+            profile-3d-contrib/profile-season-animate.svg \
+            profile-3d-contrib/profile-night-view.svg
+          if git diff --cached --quiet; then
+            echo "No generated changes."
+            exit 0
+          fi
+          git commit -m "chore: refresh monochrome profile"
+          git pull --rebase origin main
+          git push origin HEAD:main

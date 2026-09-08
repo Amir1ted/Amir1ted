@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1000" height="210" viewBox="0 0 1000 210" role="img" aria-label="Connect with AMIR">
+  <rect width="1000" height="210" rx="24" fill="#050505"/>
+  <text x="500" y="58" text-anchor="middle" fill="#f0f0f0" font-family="Georgia, serif" font-size="29" letter-spacing="4">CONNECT / WITH / ME</text>
+  <text x="500" y="86" text-anchor="middle" fill="#5e5e5e" font-family="ui-monospace, monospace" font-size="10" letter-spacing="3">THREE CHANNELS · ONE SIGNAL</text>
+  <g font-family="ui-monospace, monospace" text-anchor="middle">
+    <rect x="95" y="118" width="240" height="54" rx="12" fill="#080808" stroke="#2a2a2a"/>
+    <rect x="380" y="118" width="240" height="54" rx="12" fill="#080808" stroke="#2a2a2a"/>
+    <rect x="665" y="118" width="240" height="54" rx="12" fill="#080808" stroke="#2a2a2a"/>
+    <text x="215" y="151" fill="#dedede" font-size="13" letter-spacing="2">GITHUB</text>
+    <text x="500" y="151" fill="#dedede" font-size="13" letter-spacing="2">LINKEDIN</text>
+    <text x="785" y="151" fill="#dedede" font-size="13" letter-spacing="2">TELEGRAM</text>
+  </g>
+</svg>

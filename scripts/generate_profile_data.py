@@ -1,107 +1,278 @@
 #!/usr/bin/env python3
 from __future__ import annotations
-import json, os, urllib.request, datetime as dt, html, math
+
+import json
+import math
+import os
+import sys
+import urllib.error
+import urllib.request
+from collections import defaultdict
+from datetime import datetime, timedelta, timezone
 from pathlib import Path
+from xml.sax.saxutils import escape
 
-TOKEN=os.environ.get('GITHUB_TOKEN') or os.environ.get('GH_TOKEN')
-USER=os.environ.get('USERNAME') or os.environ.get('GITHUB_REPOSITORY_OWNER')
-if not TOKEN or not USER:
-    raise SystemExit('GITHUB_TOKEN and USERNAME are required')
+ROOT = Path(__file__).resolve().parents[1]
+ASSETS = ROOT / "assets"
+API = "https://api.github.com/graphql"
 
-QUERY=r'''
-query($login:String!){
-  user(login:$login){
-    followers{totalCount}
-    repositories(first:100, ownerAffiliations:OWNER, isFork:false){
-      totalCount
-      nodes{stargazerCount}
-    }
-    contributionsCollection{
-      contributionCalendar{
-        totalContributions
-        weeks{contributionDays{date contributionCount contributionLevel weekday}}
+
+def require_env(name: str) -> str:
+    value = os.environ.get(name, "").strip()
+    if not value:
+        raise SystemExit(f"Missing required environment variable: {name}")
+    return value
+
+
+def graphql(token: str, query: str, variables: dict) -> dict:
+    body = json.dumps({"query": query, "variables": variables}).encode("utf-8")
+    request = urllib.request.Request(
+        API,
+        data=body,
+        method="POST",
+        headers={
+            "Authorization": f"bearer {token}",
+            "Content-Type": "application/json",
+            "User-Agent": "amir-profile-generator",
+        },
+    )
+    try:
+        with urllib.request.urlopen(request, timeout=30) as response:
+            payload = json.load(response)
+    except urllib.error.HTTPError as exc:
+        details = exc.read().decode("utf-8", errors="replace")
+        raise SystemExit(f"GitHub GraphQL HTTP {exc.code}: {details}") from exc
+    if payload.get("errors"):
+        raise SystemExit("GitHub GraphQL error: " + json.dumps(payload["errors"]))
+    return payload["data"]
+
+
+def fetch_user_data(token: str, username: str, start: datetime, end: datetime) -> dict:
+    query = r'''
+    query($login: String!, $from: DateTime!, $to: DateTime!, $cursor: String) {
+      user(login: $login) {
+        login
+        followers { totalCount }
+        repositories(
+          first: 100,
+          after: $cursor,
+          ownerAffiliations: OWNER,
+          isFork: false,
+          privacy: PUBLIC,
+          orderBy: {field: UPDATED_AT, direction: DESC}
+        ) {
+          totalCount
+          pageInfo { hasNextPage endCursor }
+          nodes { stargazerCount }
+        }
+        contributionsCollection(from: $from, to: $to) {
+          contributionCalendar {
+            totalContributions
+            weeks {
+              contributionDays { date contributionCount weekday }
+            }
+          }
+        }
       }
     }
-  }
-}
-'''
-req=urllib.request.Request(
-    'https://api.github.com/graphql',
-    data=json.dumps({'query':QUERY,'variables':{'login':USER}}).encode(),
-    headers={'Authorization':f'bearer {TOKEN}','Content-Type':'application/json','User-Agent':'amir-profile-workflow'}
-)
-with urllib.request.urlopen(req,timeout=30) as r:
-    payload=json.load(r)
-if payload.get('errors'):
-    raise SystemExit('GraphQL error: '+json.dumps(payload['errors']))
-u=payload['data']['user']
-if not u: raise SystemExit('GitHub user not found')
-cal=u['contributionsCollection']['contributionCalendar']
-weeks=cal['weeks']
-days=[]
-for wi,w in enumerate(weeks):
-    for d in w['contributionDays']:
-        d=dict(d); d['week']=wi; days.append(d)
+    '''
+    cursor = None
+    stars = 0
+    user = None
+    repo_count = 0
+    while True:
+        data = graphql(token, query, {
+            "login": username,
+            "from": start.isoformat().replace("+00:00", "Z"),
+            "to": end.isoformat().replace("+00:00", "Z"),
+            "cursor": cursor,
+        })
+        user = data.get("user")
+        if not user:
+            raise SystemExit(f"GitHub user not found: {username}")
+        repos = user["repositories"]
+        repo_count = repos["totalCount"]
+        stars += sum(node["stargazerCount"] for node in repos["nodes"])
+        if not repos["pageInfo"]["hasNextPage"]:
+            break
+        cursor = repos["pageInfo"]["endCursor"]
+    user["_total_stars"] = stars
+    user["_repo_count"] = repo_count
+    return user
 
-total=cal['totalContributions']
-followers=u['followers']['totalCount']
-repos=u['repositories']['totalCount']
-stars=sum(n['stargazerCount'] for n in u['repositories']['nodes'])
-active=sum(1 for d in days if d['contributionCount']>0)
-peak=max((d['contributionCount'] for d in days),default=0)
 
-# streaks: current can end yesterday when today is still empty.
-bydate={dt.date.fromisoformat(d['date']):d['contributionCount'] for d in days}
-today=dt.date.today()
-end=today if bydate.get(today,0)>0 else today-dt.timedelta(days=1)
-current=0
-cur=end
-while bydate.get(cur,0)>0:
-    current+=1; cur-=dt.timedelta(days=1)
-longest=0; run=0
-for d in sorted(days,key=lambda x:x['date']):
-    if d['contributionCount']>0: run+=1; longest=max(longest,run)
-    else: run=0
+def flatten_days(calendar: dict) -> dict[str, int]:
+    result: dict[str, int] = {}
+    for week in calendar["weeks"]:
+        for day in week["contributionDays"]:
+            result[day["date"]] = int(day["contributionCount"])
+    return result
 
-OUT=Path('assets'); OUT.mkdir(exist_ok=True)
 
-def stat_card(x,label,value,sub=''):
-    return f'''<g transform="translate({x},112)"><rect width="250" height="118" rx="12" fill="#080808" stroke="#2b2b2b"/><text x="18" y="29" class="mono" fill="#747474" font-size="10" letter-spacing="1.8">{html.escape(label)}</text><text x="18" y="76" class="sans" fill="#f4f4f4" font-size="35" font-weight="750">{html.escape(str(value))}</text><text x="18" y="99" class="mono" fill="#6d6d6d" font-size="9.5">{html.escape(sub)}</text></g>'''
+def calculate_streaks(day_counts: dict[str, int]) -> tuple[int, int, int, int]:
+    if not day_counts:
+        return 0, 0, 0, 0
+    dates = sorted(datetime.fromisoformat(d).date() for d in day_counts)
+    active_days = sum(v > 0 for v in day_counts.values())
+    peak_day = max(day_counts.values(), default=0)
 
-stats=f'''<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="360" viewBox="0 0 1200 360" role="img" aria-label="Live GitHub stats for {html.escape(USER)}"><defs><style><![CDATA[.sans{{font-family:Inter,'Segoe UI',Arial,sans-serif}}.mono{{font-family:'SFMono-Regular',Consolas,monospace}}.p{{animation:p 3s ease-in-out infinite}}@keyframes p{{0%,100%{{opacity:.25}}50%{{opacity:1}}}}]]></style></defs><rect width="1200" height="360" fill="#000"/><rect x="14" y="14" width="1172" height="332" rx="18" fill="#040404" stroke="#242424"/><text x="50" y="57" class="mono" fill="#777" font-size="12" letter-spacing="3">GITHUB / LIVE SIGNAL</text><text x="1150" y="57" text-anchor="end" class="mono" fill="#5f5f5f" font-size="10">SYNCED {dt.datetime.utcnow().strftime('%Y-%m-%d')} UTC</text><circle cx="1125" cy="53" r="3.5" fill="#eee" class="p"/><path d="M50 82H1150" stroke="#242424"/>{stat_card(50,'TOTAL CONTRIBUTIONS',total,'rolling GitHub calendar')}{stat_card(330,'CURRENT STREAK',str(current)+'D','consecutive active days')}{stat_card(610,'LONGEST STREAK',str(longest)+'D','within the current calendar')}{stat_card(890,'TOTAL STARS',stars,'public owned repositories')}<g class="mono" font-size="11" fill="#8a8a8a"><text x="58" y="292">REPOSITORIES <tspan fill="#ececec">{repos}</tspan></text><text x="330" y="292">FOLLOWERS <tspan fill="#ececec">{followers}</tspan></text><text x="610" y="292">ACTIVE DAYS <tspan fill="#ececec">{active}</tspan></text><text x="890" y="292">PEAK DAY <tspan fill="#ececec">{peak}</tspan></text></g><path d="M50 315H1150" stroke="#1d1d1d"/><text x="600" y="335" text-anchor="middle" class="mono" fill="#505050" font-size="9.5">generated inside this repository · no external stats card service</text></svg>'''
-(OUT/'github-stats.svg').write_text(stats)
+    longest = 0
+    running = 0
+    for d in dates:
+        if day_counts[d.isoformat()] > 0:
+            running += 1
+            longest = max(longest, running)
+        else:
+            running = 0
 
-# Contribution calendar. Use GitHub's contributionLevel, recolored into grayscale.
-LEVEL={'NONE':'#0b0b0b','FIRST_QUARTILE':'#303030','SECOND_QUARTILE':'#666666','THIRD_QUARTILE':'#aaaaaa','FOURTH_QUARTILE':'#f1f1f1'}
-cell=14; gap=4; x0=120; y0=118
-parts=[f'''<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="390" viewBox="0 0 1200 390" role="img" aria-label="Monochrome GitHub contribution graph for {html.escape(USER)}"><defs><style><![CDATA[.sans{{font-family:Inter,'Segoe UI',Arial,sans-serif}}.mono{{font-family:'SFMono-Regular',Consolas,monospace}}]]></style></defs><rect width="1200" height="390" fill="#000"/><rect x="14" y="14" width="1172" height="362" rx="18" fill="#040404" stroke="#242424"/><text x="50" y="58" class="mono" fill="#777" font-size="12" letter-spacing="3">CONTRIBUTION / 365-DAY SIGNAL</text><text x="1150" y="58" text-anchor="end" class="mono" fill="#d7d7d7" font-size="12">{total} CONTRIBUTIONS</text><path d="M50 82H1150" stroke="#242424"/>''']
-# month labels based on first visible day per month
-seen=set()
-for wi,w in enumerate(weeks):
-    for d in w['contributionDays']:
-        date=dt.date.fromisoformat(d['date'])
-        key=(date.year,date.month)
-        if key not in seen and date.day<=7:
-            seen.add(key)
-            x=x0+wi*(cell+gap)
-            parts.append(f'<text x="{x}" y="103" class="mono" fill="#626262" font-size="9">{date.strftime("%b").upper()}</text>')
-# weekday labels
-for lab,row in [('MON',1),('WED',3),('FRI',5)]:
-    parts.append(f'<text x="82" y="{y0+row*(cell+gap)+11}" text-anchor="end" class="mono" fill="#555" font-size="8.5">{lab}</text>')
-for wi,w in enumerate(weeks):
-    ds=w['contributionDays']
-    for ri,d in enumerate(ds):
-        x=x0+wi*(cell+gap); y=y0+ri*(cell+gap); fill=LEVEL.get(d['contributionLevel'],'#444')
-        title=f"{d['date']}: {d['contributionCount']} contributions"
-        parts.append(f'<rect x="{x}" y="{y}" width="{cell}" height="{cell}" rx="2.5" fill="{fill}" stroke="#1e1e1e"><title>{html.escape(title)}</title></rect>')
-# weekly signal bars underneath
-weekly=[sum(d['contributionCount'] for d in w['contributionDays']) for w in weeks]
-mx=max(weekly or [1])
-base=306
-parts.append('<path d="M120 306H1075" stroke="#1e1e1e"/>')
-for wi,val in enumerate(weekly):
-    x=x0+wi*(cell+gap)+2; h=0 if mx==0 else 35*val/mx
-    parts.append(f'<rect x="{x}" y="{base-h:.1f}" width="10" height="{h:.1f}" fill="#bdbdbd" opacity=".72"/>')
-parts.append('<g class="mono" font-size="9" fill="#5d5d5d"><text x="120" y="344">LESS</text><rect x="160" y="334" width="12" height="12" rx="2" fill="#0b0b0b" stroke="#1e1e1e"/><rect x="180" y="334" width="12" height="12" rx="2" fill="#303030"/><rect x="200" y="334" width="12" height="12" rx="2" fill="#666"/><rect x="220" y="334" width="12" height="12" rx="2" fill="#aaa"/><rect x="240" y="334" width="12" height="12" rx="2" fill="#f1f1f1"/><text x="262" y="344">MORE</text><text x="1150" y="344" text-anchor="end">generated from GitHub GraphQL · monochrome only</text></g></svg>')
-(OUT/'contribution-graph.svg').write_text(''.join(parts))
-print('generated',OUT/'github-stats.svg',OUT/'contribution-graph.svg')
+    current = 0
+    cursor = dates[-1]
+    while cursor.isoformat() in day_counts and day_counts[cursor.isoformat()] > 0:
+        current += 1
+        cursor -= timedelta(days=1)
+    return current, longest, active_days, peak_day
+
+
+def write_stats(username: str, calendar: dict, followers: int, repos: int, stars: int, output: Path) -> None:
+    counts = flatten_days(calendar)
+    current, longest, active, peak = calculate_streaks(counts)
+    metrics = [
+        ("CONTRIBUTIONS", str(calendar["totalContributions"]), "LAST 365 DAYS"),
+        ("CURRENT STREAK", f"{current}D", "ENDING TODAY"),
+        ("LONGEST STREAK", f"{longest}D", "LAST 365 DAYS"),
+        ("TOTAL STARS", str(stars), "PUBLIC OWNED REPOS"),
+        ("REPOSITORIES", str(repos), "PUBLIC · NON-FORK"),
+        ("FOLLOWERS", str(followers), "GITHUB"),
+        ("ACTIVE DAYS", str(active), "LAST 365 DAYS"),
+        ("PEAK DAY", str(peak), "CONTRIBUTIONS"),
+    ]
+    cards = []
+    for i, (label, value, note) in enumerate(metrics):
+        col, row = i % 4, i // 4
+        x, y = 48 + col * 231, 132 + row * 116
+        cards.append(f'''
+        <g transform="translate({x} {y})">
+          <rect width="211" height="92" rx="12" fill="#080808" stroke="#242424"/>
+          <text x="18" y="24" fill="#585858" font-family="ui-monospace, monospace" font-size="9" letter-spacing="1.7">{escape(label)}</text>
+          <text x="18" y="59" fill="#efefef" font-family="Georgia, serif" font-size="27" font-weight="700">{escape(value)}</text>
+          <text x="18" y="78" fill="#444444" font-family="ui-monospace, monospace" font-size="8" letter-spacing="1.2">{escape(note)}</text>
+        </g>''')
+    svg = f'''<svg xmlns="http://www.w3.org/2000/svg" width="1000" height="390" viewBox="0 0 1000 390" role="img" aria-label="{escape(username)} live GitHub stats">
+      <rect width="1000" height="390" rx="24" fill="#050505"/>
+      <text x="48" y="58" fill="#f0f0f0" font-family="Georgia, serif" font-size="31" letter-spacing="3">GITHUB / STATS</text>
+      <text x="48" y="86" fill="#5f5f5f" font-family="ui-monospace, monospace" font-size="10" letter-spacing="3">LIVE PROFILE TELEMETRY · {escape(username.upper())}</text>
+      <path d="M48 108H952" stroke="#242424"/>
+      {''.join(cards)}
+      <text x="952" y="366" text-anchor="end" fill="#3c3c3c" font-family="ui-monospace, monospace" font-size="8">generated by GitHub Actions</text>
+    </svg>'''
+    output.write_text(svg, encoding="utf-8")
+
+
+def intensity(count: int) -> int:
+    if count <= 0:
+        return 0
+    if count == 1:
+        return 1
+    if count <= 3:
+        return 2
+    if count <= 6:
+        return 3
+    return 4
+
+
+def write_graph(username: str, calendar: dict, output: Path) -> None:
+    counts = flatten_days(calendar)
+    if not counts:
+        raise SystemExit("No contribution days returned")
+
+    dates = sorted(datetime.fromisoformat(d).date() for d in counts)
+    start, end = dates[0], dates[-1]
+    aligned_start = start - timedelta(days=(start.weekday() + 1) % 7)
+    weeks = math.ceil(((end - aligned_start).days + 1) / 7)
+    cell, gap = 11, 4
+    x0, y0 = 72, 142
+    palette = ["#101010", "#2d2d2d", "#565656", "#969696", "#f0f0f0"]
+    rects, month_labels = [], []
+    seen_month = None
+
+    for i in range(weeks * 7):
+        day = aligned_start + timedelta(days=i)
+        if day > end:
+            break
+        week = i // 7
+        dow = (day.weekday() + 1) % 7
+        count = counts.get(day.isoformat(), 0)
+        x = x0 + week * (cell + gap)
+        y = y0 + dow * (cell + gap)
+        fill = palette[intensity(count)] if day >= start else "#090909"
+        rects.append(
+            f'<rect x="{x}" y="{y}" width="{cell}" height="{cell}" rx="2" fill="{fill}">'
+            f'<title>{day.isoformat()}: {count} contributions</title></rect>'
+        )
+        if day.day <= 7 and day.month != seen_month and dow == 0:
+            seen_month = day.month
+            month_labels.append(
+                f'<text x="{x}" y="125" fill="#4f4f4f" font-family="ui-monospace, monospace" font-size="9">{day.strftime("%b").upper()}</text>'
+            )
+
+    weekly = defaultdict(int)
+    for date_text, count in counts.items():
+        day = datetime.fromisoformat(date_text).date()
+        weekly[(day - aligned_start).days // 7] += count
+    max_week = max(weekly.values(), default=1)
+    signal = []
+    baseline = 310
+    for week in range(weeks):
+        x = x0 + week * (cell + gap)
+        height = 40 * weekly.get(week, 0) / max_week if max_week else 0
+        signal.append(f'<rect x="{x}" y="{baseline-height:.1f}" width="{cell}" height="{height:.1f}" rx="2" fill="#6f6f6f"/>')
+
+    legend = ''.join(
+        f'<rect x="{40+i*18}" y="-9" width="11" height="11" rx="2" fill="{color}"/>'
+        for i, color in enumerate(palette)
+    )
+    svg = f'''<svg xmlns="http://www.w3.org/2000/svg" width="1000" height="365" viewBox="0 0 1000 365" role="img" aria-label="{escape(username)} contribution graph">
+      <rect width="1000" height="365" rx="24" fill="#050505"/>
+      <text x="48" y="58" fill="#f0f0f0" font-family="Georgia, serif" font-size="31" letter-spacing="3">CONTRIBUTION / GRAPH</text>
+      <text x="48" y="86" fill="#5f5f5f" font-family="ui-monospace, monospace" font-size="10" letter-spacing="3">LAST 365 DAYS · MONOCHROME SIGNAL MAP</text>
+      <path d="M48 108H952" stroke="#242424"/>
+      {''.join(month_labels)}
+      <text x="42" y="153" fill="#3f3f3f" font-family="ui-monospace, monospace" font-size="8">SUN</text>
+      <text x="42" y="183" fill="#3f3f3f" font-family="ui-monospace, monospace" font-size="8">TUE</text>
+      <text x="42" y="213" fill="#3f3f3f" font-family="ui-monospace, monospace" font-size="8">THU</text>
+      <text x="42" y="243" fill="#3f3f3f" font-family="ui-monospace, monospace" font-size="8">SAT</text>
+      {''.join(rects)}
+      <text x="72" y="337" fill="#424242" font-family="ui-monospace, monospace" font-size="9" letter-spacing="2">WEEKLY SIGNAL</text>
+      {''.join(signal)}
+      <g transform="translate(775 330)">
+        <text x="0" y="0" fill="#414141" font-family="ui-monospace, monospace" font-size="8">LESS</text>
+        {legend}
+        <text x="140" y="0" fill="#414141" font-family="ui-monospace, monospace" font-size="8">MORE</text>
+      </g>
+    </svg>'''
+    output.write_text(svg, encoding="utf-8")
+
+
+def main() -> int:
+    token = require_env("GITHUB_TOKEN")
+    username = os.environ.get("GITHUB_USERNAME", "Amir1ted").strip() or "Amir1ted"
+    now = datetime.now(timezone.utc)
+    start = now - timedelta(days=364)
+    user = fetch_user_data(token, username, start, now)
+    calendar = user["contributionsCollection"]["contributionCalendar"]
+    ASSETS.mkdir(parents=True, exist_ok=True)
+    write_stats(
+        username,
+        calendar,
+        user["followers"]["totalCount"],
+        user["_repo_count"],
+        user["_total_stars"],
+        ASSETS / "github-stats.svg",
+    )
+    write_graph(username, calendar, ASSETS / "contribution-graph.svg")
+    print("Generated github-stats.svg and contribution-graph.svg")
+    return 0
+
+
+if __name__ == "__main__":
+    sys.exit(main())

@@ -1,1 +1,14 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="1400" height="44" viewBox="0 0 1400 44"><style><![CDATA[.p{animation:p 3.8s ease-in-out infinite}@keyframes p{0%,100%{opacity:.25}50%{opacity:.95}}]]></style><rect width="1400" height="44" fill="#000"/><path d="M36 22H628M772 22H1364" stroke="#262626"/><path d="M575 22H650M750 22H825" stroke="#747474" class="p"/><path d="M700 10l12 12-12 12-12-12z" fill="none" stroke="#d8d8d8"/><circle cx="700" cy="22" r="2" fill="#fff" class="p"/></svg>
+<svg xmlns="http://www.w3.org/2000/svg" width="1000" height="42" viewBox="0 0 1000 42">
+  <defs>
+    <linearGradient id="g" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#080808"/>
+      <stop offset="0.5" stop-color="#666666"/>
+      <stop offset="1" stop-color="#080808"/>
+    </linearGradient>
+  </defs>
+  <rect width="1000" height="42" fill="#050505"/>
+  <path d="M80 21H450 M550 21H920" stroke="url(#g)"/>
+  <circle cx="500" cy="21" r="3" fill="#d7d7d7"/>
+  <circle cx="485" cy="21" r="1.5" fill="#565656"/>
+  <circle cx="515" cy="21" r="1.5" fill="#565656"/>
+</svg>

@@ -1,87 +1,87 @@
 <div align="center">
-  <a href="https://github.com/Amir1ted">
-    <img src="./assets/header.svg?v=2.2" width="100%" alt="AMIR — Computer Engineering, Artificial Intelligence and Computer Vision" />
-  </a>
+  <img src="./assets/header.svg" width="100%" alt="AMIR — Building intelligence from data and vision" />
 </div>
 
-<p align="center">
-  <a href="https://github.com/Amir1ted"><img src="https://img.shields.io/badge/%40Amir1ted-000000?style=for-the-badge&logo=github&logoColor=ffffff&labelColor=0a0a0a" alt="GitHub @Amir1ted" /></a>
-  <a href="https://github.com/Amir1ted?tab=followers"><img src="https://img.shields.io/github/followers/Amir1ted?label=FOLLOWERS&style=for-the-badge&color=000000&labelColor=0a0a0a&logo=github&logoColor=ffffff" alt="Followers" /></a>
-  <a href="https://github.com/Amir1ted"><img src="https://komarev.com/ghpvc/?username=Amir1ted&label=PROFILE%20VIEWS&color=000000&style=for-the-badge" alt="Profile views" /></a>
-</p>
+<div align="center">
+  <a href="https://github.com/Amir1ted"><b>GITHUB</b></a>
+  &nbsp;&nbsp;·&nbsp;&nbsp;
+  <a href="https://www.linkedin.com/in/amir-h-faeeghi-43165641b"><b>LINKEDIN</b></a>
+  &nbsp;&nbsp;·&nbsp;&nbsp;
+  <a href="https://t.me/amirhoss1n"><b>TELEGRAM</b></a>
+</div>
 
-<div align="center"><img src="./assets/divider.svg?v=2.2" width="100%" alt="" /></div>
+<br />
 
 ## `01 / IDENTITY`
 
 <div align="center">
-  <img src="./assets/identity.svg?v=2.2" width="100%" alt="AMIR identity profile" />
+  <img src="./assets/identity.svg" width="100%" alt="AMIR identity" />
 </div>
 
-<div align="center"><img src="./assets/divider.svg?v=2.2" width="100%" alt="" /></div>
+<div align="center"><img src="./assets/divider.svg" width="100%" alt="divider" /></div>
 
 ## `02 / TECH STACK`
 
 <div align="center">
-  <img src="./assets/tech-stack.svg?v=2.2" width="100%" alt="AMIR monochrome tech stack" />
+  <img src="./assets/tech-stack.svg" width="100%" alt="AMIR technology stack" />
 </div>
 
-<div align="center"><img src="./assets/divider.svg?v=2.2" width="100%" alt="" /></div>
+<div align="center"><img src="./assets/divider.svg" width="100%" alt="divider" /></div>
 
 ## `03 / NEURAL SKILL ATLAS`
 
 <div align="center">
-  <img src="./assets/neural-skill-atlas.svg?v=2.2" width="100%" alt="AMIR Neural Skill Atlas" />
+  <img src="./assets/neural-skill-atlas.svg" width="100%" alt="AMIR neural skill atlas" />
 </div>
 
-<div align="center"><img src="./assets/divider.svg?v=2.2" width="100%" alt="" /></div>
+<div align="center"><img src="./assets/divider.svg" width="100%" alt="divider" /></div>
 
 ## `04 / GITHUB STATS`
 
 <div align="center">
-  <img src="./assets/github-stats.svg?v=2.2" width="100%" alt="AMIR live GitHub stats" />
+  <img src="./assets/github-stats.svg" width="100%" alt="AMIR live GitHub stats" />
 </div>
 
-<div align="center"><img src="./assets/divider.svg?v=2.2" width="100%" alt="" /></div>
+<div align="center"><img src="./assets/divider.svg" width="100%" alt="divider" /></div>
 
 ## `05 / CONTRIBUTION GRAPH`
 
 <div align="center">
-  <img src="./assets/contribution-graph.svg?v=2.2" width="100%" alt="AMIR monochrome GitHub contribution graph" />
+  <img src="./assets/contribution-graph.svg" width="100%" alt="AMIR monochrome GitHub contribution graph" />
+  <br /><br />
+  <img src="./assets/contribution-snake.svg" width="100%" alt="Black and white GitHub contribution snake" />
 </div>
 
-<div align="center">
-  <img src="./assets/contribution-snake.svg?v=2.2" width="100%" alt="Black and white GitHub contribution snake" />
-</div>
-
-<div align="center"><img src="./assets/divider.svg?v=2.2" width="100%" alt="" /></div>
+<div align="center"><img src="./assets/divider.svg" width="100%" alt="divider" /></div>
 
 ## `06 / 3D ANIMATED PROFILE`
 
 <div align="center">
-  <img src="./profile-3d-contrib/profile-season-animate.svg?v=2.2" width="100%" alt="Monochrome 3D animated GitHub contributions" />
+  <img src="./profile-3d-contrib/profile-season-animate.svg" width="100%" alt="Monochrome 3D animated GitHub contributions" />
+  <br /><br />
+  <details>
+    <summary><b>More monochrome 3D views</b></summary>
+    <br />
+    <img src="./profile-3d-contrib/profile-night-view.svg" width="100%" alt="Monochrome 3D night view" />
+  </details>
 </div>
 
-<details>
-<summary><b>More monochrome 3D views</b></summary>
-<br/>
-<div align="center">
-  <img src="./profile-3d-contrib/profile-night-view.svg?v=2.2" width="100%" alt="Monochrome 3D night view" />
-</div>
-</details>
-
-<div align="center"><img src="./assets/divider.svg?v=2.2" width="100%" alt="" /></div>
+<div align="center"><img src="./assets/divider.svg" width="100%" alt="divider" /></div>
 
 ## `07 / CONNECT WITH ME`
 
-<p align="center">
-  <a href="https://github.com/Amir1ted"><img src="https://img.shields.io/badge/GITHUB-AMIR1TED-000000?style=for-the-badge&logo=github&logoColor=ffffff&labelColor=111111" alt="GitHub" /></a>
-  <a href="https://www.linkedin.com/in/amir-h-faeeghi-43165641b"><img src="https://img.shields.io/badge/LINKEDIN-AMIR-000000?style=for-the-badge&logo=linkedin&logoColor=ffffff&labelColor=111111" alt="LinkedIn" /></a>
-  <a href="https://t.me/amirhoss1n"><img src="https://img.shields.io/badge/TELEGRAM-%40AMIRHOSS1N-000000?style=for-the-badge&logo=telegram&logoColor=ffffff&labelColor=111111" alt="Telegram" /></a>
-</p>
+<div align="center">
+  <img src="./assets/connect.svg" width="100%" alt="Connect with AMIR" />
+  <br /><br />
+  <a href="https://github.com/Amir1ted"><b>GitHub</b></a>
+  &nbsp;&nbsp;&nbsp;•&nbsp;&nbsp;&nbsp;
+  <a href="https://www.linkedin.com/in/amir-h-faeeghi-43165641b"><b>LinkedIn</b></a>
+  &nbsp;&nbsp;&nbsp;•&nbsp;&nbsp;&nbsp;
+  <a href="https://t.me/amirhoss1n"><b>Telegram</b></a>
+</div>
 
-<p align="center"><sub>GitHub for the work · LinkedIn for the professional side · Telegram for a direct line.</sub></p>
+<br />
 
-<div align="center"><img src="./assets/divider.svg?v=2.2" width="100%" alt="" /></div>
-
-<p align="center"><code>while alive: learn(); build(); refine()</code></p>
+<div align="center">
+  <img src="./assets/footer.svg" width="100%" alt="End of signal" />
+</div>

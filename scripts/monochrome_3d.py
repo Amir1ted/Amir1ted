@@ -1,22 +1,74 @@
 #!/usr/bin/env python3
-from pathlib import Path
+from __future__ import annotations
+
+import colorsys
 import re
-HEX6=re.compile(r"#([0-9a-fA-F]{6})(?![0-9a-fA-F])")
-HEX3=re.compile(r"#([0-9a-fA-F]{3})(?![0-9a-fA-F])")
-RGB=re.compile(r"rgba?\(\s*(\d{1,3})\s*,\s*(\d{1,3})\s*,\s*(\d{1,3})(?:\s*,\s*([0-9.]+))?\s*\)",re.I)
-def gray(r,g,b):
-    lum=round(.2126*r+.7152*g+.0722*b)
-    if lum<22:return 0
-    return max(18,min(244,round((lum-22)*1.08+18)))
-def h6(m):
-    h=m.group(1); r,g,b=[int(h[i:i+2],16) for i in (0,2,4)];v=gray(r,g,b);return f'#{v:02x}{v:02x}{v:02x}'
-def h3(m):
-    h=m.group(1); r,g,b=[int(c*2,16) for c in h];v=gray(r,g,b);return f'#{v:02x}{v:02x}{v:02x}'
-def rgb(m):
-    r,g,b=[min(255,int(m.group(i))) for i in (1,2,3)];v=gray(r,g,b);a=m.group(4)
-    return f'rgba({v},{v},{v},{a})' if a is not None else f'rgb({v},{v},{v})'
-root=Path('profile-3d-contrib')
-for p in root.glob('*.svg'):
-    s=p.read_text(encoding='utf-8')
-    s=HEX6.sub(h6,s);s=HEX3.sub(h3,s);s=RGB.sub(rgb,s)
-    p.write_text(s,encoding='utf-8');print('monochromized',p)
+import sys
+from pathlib import Path
+
+HEX6 = re.compile(r"#([0-9a-fA-F]{6})(?![0-9a-fA-F])")
+HEX3 = re.compile(r"#([0-9a-fA-F]{3})(?![0-9a-fA-F])")
+RGB = re.compile(r"rgba?\(\s*(\d{1,3})\s*,\s*(\d{1,3})\s*,\s*(\d{1,3})(\s*,\s*[\d.]+\s*)?\)", re.I)
+HSL = re.compile(r"hsla?\(\s*([\d.]+)\s*,\s*([\d.]+)%\s*,\s*([\d.]+)%(\s*,\s*[\d.]+\s*)?\)", re.I)
+
+
+def gray(r: int, g: int, b: int) -> int:
+    return max(0, min(255, round(0.2126 * r + 0.7152 * g + 0.0722 * b)))
+
+
+def hex6_to_gray(match: re.Match) -> str:
+    value = match.group(1)
+    r, g, b = int(value[:2], 16), int(value[2:4], 16), int(value[4:], 16)
+    y = gray(r, g, b)
+    return f"#{y:02x}{y:02x}{y:02x}"
+
+
+def hex3_to_gray(match: re.Match) -> str:
+    value = match.group(1)
+    r, g, b = (int(ch * 2, 16) for ch in value)
+    y = gray(r, g, b)
+    return f"#{y:02x}{y:02x}{y:02x}"
+
+
+def rgb_to_gray(match: re.Match) -> str:
+    r, g, b = (max(0, min(255, int(match.group(i)))) for i in (1, 2, 3))
+    y = gray(r, g, b)
+    alpha = match.group(4)
+    return f"rgba({y},{y},{y}{alpha})" if alpha else f"rgb({y},{y},{y})"
+
+
+def hsl_to_gray(match: re.Match) -> str:
+    h = (float(match.group(1)) % 360) / 360
+    s = max(0, min(100, float(match.group(2)))) / 100
+    l = max(0, min(100, float(match.group(3)))) / 100
+    r, g, b = colorsys.hls_to_rgb(h, l, s)
+    y = gray(round(r * 255), round(g * 255), round(b * 255))
+    alpha = match.group(4)
+    return f"rgba({y},{y},{y}{alpha})" if alpha else f"rgb({y},{y},{y})"
+
+
+def process(path: Path) -> None:
+    text = path.read_text(encoding="utf-8")
+    text = HEX6.sub(hex6_to_gray, text)
+    text = HEX3.sub(hex3_to_gray, text)
+    text = RGB.sub(rgb_to_gray, text)
+    text = HSL.sub(hsl_to_gray, text)
+    path.write_text(text, encoding="utf-8")
+    print(f"monochrome: {path}")
+
+
+def main() -> int:
+    paths = [Path(p) for p in sys.argv[1:]] or [
+        Path("profile-3d-contrib/profile-season-animate.svg"),
+        Path("profile-3d-contrib/profile-night-view.svg"),
+    ]
+    missing = [str(path) for path in paths if not path.exists()]
+    if missing:
+        raise SystemExit("Missing generated SVG(s): " + ", ".join(missing))
+    for path in paths:
+        process(path)
+    return 0
+
+
+if __name__ == "__main__":
+    raise SystemExit(main())
