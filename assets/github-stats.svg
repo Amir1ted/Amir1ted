@@ -1,14 +1,56 @@
-<<<<<<< HEAD
-<svg xmlns="http://www.w3.org/2000/svg" width="1000" height="340" viewBox="0 0 1000 340" role="img" aria-label="GITHUB / STATS">
-  <defs><linearGradient id="scan" x1="0" x2="1"><stop offset="0" stop-color="#1a1a1a"/><stop offset=".5" stop-color="#666666"/><stop offset="1" stop-color="#1a1a1a"/><animate attributeName="x1" values="-1;1" dur="4s" repeatCount="indefinite"/><animate attributeName="x2" values="0;2" dur="4s" repeatCount="indefinite"/></linearGradient></defs>
-  <rect width="1000" height="340" rx="24" fill="#050505"/>
-  <rect x="40" y="40" width="920" height="260" rx="18" fill="#080808" stroke="#242424"/>
-  <text x="70" y="92" fill="#efefef" font-family="Georgia, serif" font-size="29" letter-spacing="3">GITHUB / STATS</text>
-  <text x="70" y="122" fill="#606060" font-family="ui-monospace, monospace" font-size="10" letter-spacing="3">LIVE DATA · LAST 365 DAYS</text>
-  <path d="M70 170H930" stroke="url(#scan)" stroke-width="2"/>
-  <text x="500" y="215" text-anchor="middle" fill="#8a8a8a" font-family="ui-monospace, monospace" font-size="12" letter-spacing="3">FIRST SYNC PENDING</text>
-  <text x="500" y="242" text-anchor="middle" fill="#444444" font-family="ui-monospace, monospace" font-size="10">GitHub Actions will replace this file automatically.</text>
-</svg>
-=======
-<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="360" viewBox="0 0 1200 360" role="img" aria-label="Live GitHub stats for Amir1ted"><defs><style><![CDATA[.sans{font-family:Inter,'Segoe UI',Arial,sans-serif}.mono{font-family:'SFMono-Regular',Consolas,monospace}.p{animation:p 3s ease-in-out infinite}@keyframes p{0%,100%{opacity:.25}50%{opacity:1}}]]></style></defs><rect width="1200" height="360" fill="#000"/><rect x="14" y="14" width="1172" height="332" rx="18" fill="#040404" stroke="#242424"/><text x="50" y="57" class="mono" fill="#777" font-size="12" letter-spacing="3">GITHUB / LIVE SIGNAL</text><text x="1150" y="57" text-anchor="end" class="mono" fill="#5f5f5f" font-size="10">SYNCED 2026-09-08 UTC</text><circle cx="1125" cy="53" r="3.5" fill="#eee" class="p"/><path d="M50 82H1150" stroke="#242424"/><g transform="translate(50,112)"><rect width="250" height="118" rx="12" fill="#080808" stroke="#2b2b2b"/><text x="18" y="29" class="mono" fill="#747474" font-size="10" letter-spacing="1.8">TOTAL CONTRIBUTIONS</text><text x="18" y="76" class="sans" fill="#f4f4f4" font-size="35" font-weight="750">51</text><text x="18" y="99" class="mono" fill="#6d6d6d" font-size="9.5">rolling GitHub calendar</text></g><g transform="translate(330,112)"><rect width="250" height="118" rx="12" fill="#080808" stroke="#2b2b2b"/><text x="18" y="29" class="mono" fill="#747474" font-size="10" letter-spacing="1.8">CURRENT STREAK</text><text x="18" y="76" class="sans" fill="#f4f4f4" font-size="35" font-weight="750">2D</text><text x="18" y="99" class="mono" fill="#6d6d6d" font-size="9.5">consecutive active days</text></g><g transform="translate(610,112)"><rect width="250" height="118" rx="12" fill="#080808" stroke="#2b2b2b"/><text x="18" y="29" class="mono" fill="#747474" font-size="10" letter-spacing="1.8">LONGEST STREAK</text><text x="18" y="76" class="sans" fill="#f4f4f4" font-size="35" font-weight="750">3D</text><text x="18" y="99" class="mono" fill="#6d6d6d" font-size="9.5">within the current calendar</text></g><g transform="translate(890,112)"><rect width="250" height="118" rx="12" fill="#080808" stroke="#2b2b2b"/><text x="18" y="29" class="mono" fill="#747474" font-size="10" letter-spacing="1.8">TOTAL STARS</text><text x="18" y="76" class="sans" fill="#f4f4f4" font-size="35" font-weight="750">9</text><text x="18" y="99" class="mono" fill="#6d6d6d" font-size="9.5">public owned repositories</text></g><g class="mono" font-size="11" fill="#8a8a8a"><text x="58" y="292">REPOSITORIES <tspan fill="#ececec">5</tspan></text><text x="330" y="292">FOLLOWERS <tspan fill="#ececec">2</tspan></text><text x="610" y="292">ACTIVE DAYS <tspan fill="#ececec">9</tspan></text><text x="890" y="292">PEAK DAY <tspan fill="#ececec">12</tspan></text></g><path d="M50 315H1150" stroke="#1d1d1d"/><text x="600" y="335" text-anchor="middle" class="mono" fill="#505050" font-size="9.5">generated inside this repository · no external stats card service</text></svg>
->>>>>>> 7169ee0f1991a774dc6d59eb0052c3f4b86bb6cb
+<svg xmlns="http://www.w3.org/2000/svg" width="1000" height="390" viewBox="0 0 1000 390" role="img" aria-label="Amir1ted live GitHub stats">
+      <rect width="1000" height="390" rx="24" fill="#050505"/>
+      <text x="48" y="58" fill="#f0f0f0" font-family="Georgia, serif" font-size="31" letter-spacing="3">GITHUB / STATS</text>
+      <text x="48" y="86" fill="#5f5f5f" font-family="ui-monospace, monospace" font-size="10" letter-spacing="3">LIVE PROFILE TELEMETRY · AMIR1TED</text>
+      <path d="M48 108H952" stroke="#242424"/>
+      
+        <g transform="translate(48 132)">
+          <rect width="211" height="92" rx="12" fill="#080808" stroke="#242424"/>
+          <text x="18" y="24" fill="#585858" font-family="ui-monospace, monospace" font-size="9" letter-spacing="1.7">CONTRIBUTIONS</text>
+          <text x="18" y="59" fill="#efefef" font-family="Georgia, serif" font-size="27" font-weight="700">52</text>
+          <text x="18" y="78" fill="#444444" font-family="ui-monospace, monospace" font-size="8" letter-spacing="1.2">LAST 365 DAYS</text>
+        </g>
+        <g transform="translate(279 132)">
+          <rect width="211" height="92" rx="12" fill="#080808" stroke="#242424"/>
+          <text x="18" y="24" fill="#585858" font-family="ui-monospace, monospace" font-size="9" letter-spacing="1.7">CURRENT STREAK</text>
+          <text x="18" y="59" fill="#efefef" font-family="Georgia, serif" font-size="27" font-weight="700">2D</text>
+          <text x="18" y="78" fill="#444444" font-family="ui-monospace, monospace" font-size="8" letter-spacing="1.2">ENDING TODAY</text>
+        </g>
+        <g transform="translate(510 132)">
+          <rect width="211" height="92" rx="12" fill="#080808" stroke="#242424"/>
+          <text x="18" y="24" fill="#585858" font-family="ui-monospace, monospace" font-size="9" letter-spacing="1.7">LONGEST STREAK</text>
+          <text x="18" y="59" fill="#efefef" font-family="Georgia, serif" font-size="27" font-weight="700">3D</text>
+          <text x="18" y="78" fill="#444444" font-family="ui-monospace, monospace" font-size="8" letter-spacing="1.2">LAST 365 DAYS</text>
+        </g>
+        <g transform="translate(741 132)">
+          <rect width="211" height="92" rx="12" fill="#080808" stroke="#242424"/>
+          <text x="18" y="24" fill="#585858" font-family="ui-monospace, monospace" font-size="9" letter-spacing="1.7">TOTAL STARS</text>
+          <text x="18" y="59" fill="#efefef" font-family="Georgia, serif" font-size="27" font-weight="700">9</text>
+          <text x="18" y="78" fill="#444444" font-family="ui-monospace, monospace" font-size="8" letter-spacing="1.2">PUBLIC OWNED REPOS</text>
+        </g>
+        <g transform="translate(48 248)">
+          <rect width="211" height="92" rx="12" fill="#080808" stroke="#242424"/>
+          <text x="18" y="24" fill="#585858" font-family="ui-monospace, monospace" font-size="9" letter-spacing="1.7">REPOSITORIES</text>
+          <text x="18" y="59" fill="#efefef" font-family="Georgia, serif" font-size="27" font-weight="700">5</text>
+          <text x="18" y="78" fill="#444444" font-family="ui-monospace, monospace" font-size="8" letter-spacing="1.2">PUBLIC · NON-FORK</text>
+        </g>
+        <g transform="translate(279 248)">
+          <rect width="211" height="92" rx="12" fill="#080808" stroke="#242424"/>
+          <text x="18" y="24" fill="#585858" font-family="ui-monospace, monospace" font-size="9" letter-spacing="1.7">FOLLOWERS</text>
+          <text x="18" y="59" fill="#efefef" font-family="Georgia, serif" font-size="27" font-weight="700">2</text>
+          <text x="18" y="78" fill="#444444" font-family="ui-monospace, monospace" font-size="8" letter-spacing="1.2">GITHUB</text>
+        </g>
+        <g transform="translate(510 248)">
+          <rect width="211" height="92" rx="12" fill="#080808" stroke="#242424"/>
+          <text x="18" y="24" fill="#585858" font-family="ui-monospace, monospace" font-size="9" letter-spacing="1.7">ACTIVE DAYS</text>
+          <text x="18" y="59" fill="#efefef" font-family="Georgia, serif" font-size="27" font-weight="700">9</text>
+          <text x="18" y="78" fill="#444444" font-family="ui-monospace, monospace" font-size="8" letter-spacing="1.2">LAST 365 DAYS</text>
+        </g>
+        <g transform="translate(741 248)">
+          <rect width="211" height="92" rx="12" fill="#080808" stroke="#242424"/>
+          <text x="18" y="24" fill="#585858" font-family="ui-monospace, monospace" font-size="9" letter-spacing="1.7">PEAK DAY</text>
+          <text x="18" y="59" fill="#efefef" font-family="Georgia, serif" font-size="27" font-weight="700">13</text>
+          <text x="18" y="78" fill="#444444" font-family="ui-monospace, monospace" font-size="8" letter-spacing="1.2">CONTRIBUTIONS</text>
+        </g>
+      <text x="952" y="366" text-anchor="end" fill="#3c3c3c" font-family="ui-monospace, monospace" font-size="8">generated by GitHub Actions</text>
+    </svg>
