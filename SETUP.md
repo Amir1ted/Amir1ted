@@ -1,50 +1,19 @@
-# Setup — AMIR Monochrome Gothic Profile
+# Setup — AMIR Monochrome Profile v2
 
-This package is designed for the profile repository `Amir1ted/Amir1ted`.
+1. Copy **all files and folders** from this package into `Amir1ted/Amir1ted` and commit/push to `main`.
+2. This version includes placeholder SVGs, so no section should render as a broken image during the first sync.
+3. The first push automatically triggers three path-filtered workflows:
+   - **Monochrome Profile Data** → generates `assets/github-stats.svg` and `assets/contribution-graph.svg` locally from GitHub GraphQL.
+   - **Monochrome Contribution Snake** → replaces the snake placeholder with your live grayscale contribution snake.
+   - **Monochrome 3D Contributions** → generates the 3D contribution SVGs and post-processes every generated color into grayscale.
+4. Open the **Actions** tab after the push. You should see workflow runs. If Actions are disabled for the repository, enable them; otherwise you can also use **Run workflow** manually.
+5. If a workflow can generate the SVG but fails on `git push` with a permissions error, open **Settings → Actions → General → Workflow permissions** and select **Read and write permissions**.
+6. Generated commits only touch generated asset paths, while push triggers are limited to workflow/script files, so the workflows do not create an infinite loop.
 
-## Install
+## Why v2 is more reliable
 
-1. Copy **all files and folders** from this package into the root of `Amir1ted/Amir1ted`.
-2. Commit and push to the `main` branch.
-3. Open **Actions** on GitHub and run these workflows once manually:
-   - `Monochrome Contribution Snake`
-   - `Monochrome 3D Contributions`
-4. Refresh your profile after both actions finish.
+The previous Stats and Contribution Graph depended on third-party Vercel-hosted image endpoints. v2 removes those dependencies: the repository generates and serves its own SVG files. The only remaining remote images are the small Shields/Komarev badges at the top and in Connect With Me.
 
-The included snake and 3D files are placeholders so the README never starts with broken images. The workflows replace them with live contribution visualizations.
+## GitHub native contribution calendar
 
-## If a workflow cannot push
-
-Go to:
-
-`Repository Settings → Actions → General → Workflow permissions`
-
-and make sure the repository allows **Read and write permissions** for `GITHUB_TOKEN`.
-
-## Design rules
-
-- Pure monochrome: black / white / grayscale only.
-- No theme-specific colored logos.
-- The activity graph, snake and 3D contribution surface are all intentionally grayscale.
-- The native GitHub contribution calendar shown by GitHub itself is outside README control. GitHub does not allow a profile README to inject CSS into the surrounding profile page, so this package cannot recolor those native squares.
-
-## Update your skill levels
-
-Edit `assets/neural-skill-atlas.svg`. Current self-ratings:
-
-| Skill | Level |
-|---|---:|
-| Python | 5/5 |
-| Machine Learning | 5/5 |
-| Deep Learning | 4/5 |
-| Computer Vision | 3/5 |
-| PyTorch | 4/5 |
-| OpenCV | 5/5 |
-| YOLO | 2/5 |
-| Git / GitHub | 3/5 |
-| Linux | 2/5 |
-| Docker | 4/5 |
-
-## Attribution
-
-The brain silhouette/path data used in `assets/neural-skill-atlas.svg` is based on a public-domain / CC0 human-brain vector from Wikimedia Commons. See `ATTRIBUTION.md`.
+README files cannot restyle the green contribution calendar that GitHub itself renders outside the README. Every contribution visualization **inside** this README is monochrome.

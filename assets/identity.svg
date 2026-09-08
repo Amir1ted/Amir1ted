@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="390" viewBox="0 0 1200 390" role="img" aria-label="AMIR Identity card">
+<defs><style><![CDATA[.serif{font-family:Georgia,'Times New Roman',serif}.sans{font-family:Inter,'Segoe UI',Arial,sans-serif}.mono{font-family:'SFMono-Regular',Consolas,monospace}.blink{animation:b 3s ease-in-out infinite}@keyframes b{0%,100%{opacity:.25}50%{opacity:1}}]]></style><radialGradient id="h"><stop offset="0" stop-color="#fff" stop-opacity=".05"/><stop offset="1" stop-color="#fff" stop-opacity="0"/></radialGradient></defs>
+<rect width="1200" height="390" fill="#000"/><rect x="14" y="14" width="1172" height="362" rx="18" fill="#040404" stroke="#252525"/>
+<ellipse cx="258" cy="195" rx="240" ry="170" fill="url(#h)"/>
+<text x="52" y="58" class="mono" fill="#747474" font-size="12" letter-spacing="3">IDENTITY / SIGNAL PROFILE</text><text x="1148" y="58" text-anchor="end" class="mono" fill="#555" font-size="11">STATUS · LEARNING</text>
+<g transform="translate(55 92)"><text x="0" y="88" class="serif" fill="#f4f4f4" font-size="82" letter-spacing="6">AMIR</text><text x="4" y="126" class="mono" fill="#9a9a9a" font-size="13" letter-spacing="2.2">COMPUTER ENGINEERING STUDENT</text><path d="M4 154H425" stroke="#262626"/><text x="4" y="190" class="sans" fill="#d8d8d8" font-size="17">I build systems that learn from data</text><text x="4" y="216" class="sans" fill="#d8d8d8" font-size="17">and perceive visual information.</text><circle cx="8" cy="257" r="4" fill="#eee" class="blink"/><text x="24" y="262" class="mono" fill="#6d6d6d" font-size="11" letter-spacing="1.4">IRAN · OPEN TO LEARNING · ALWAYS BUILDING</text></g>
+<path d="M545 92V320" stroke="#242424"/>
+<g transform="translate(585 94)">
+  <g><rect width="250" height="92" rx="10" fill="#080808" stroke="#2a2a2a"/><text x="18" y="27" class="mono" fill="#666" font-size="10" letter-spacing="2">LOCATION</text><text x="18" y="63" class="sans" fill="#f0f0f0" font-size="21" font-weight="700">Iran</text></g>
+  <g transform="translate(275 0)"><rect width="250" height="92" rx="10" fill="#080808" stroke="#2a2a2a"/><text x="18" y="27" class="mono" fill="#666" font-size="10" letter-spacing="2">PRIMARY LANGUAGE</text><text x="18" y="63" class="sans" fill="#f0f0f0" font-size="21" font-weight="700">Python</text></g>
+  <g transform="translate(0 116)"><rect width="250" height="92" rx="10" fill="#080808" stroke="#2a2a2a"/><text x="18" y="27" class="mono" fill="#666" font-size="10" letter-spacing="2">CORE FOCUS</text><text x="18" y="61" class="sans" fill="#f0f0f0" font-size="18" font-weight="700">AI · Machine Learning</text></g>
+  <g transform="translate(275 116)"><rect width="250" height="92" rx="10" fill="#080808" stroke="#2a2a2a"/><text x="18" y="27" class="mono" fill="#666" font-size="10" letter-spacing="2">VISUAL DOMAIN</text><text x="18" y="61" class="sans" fill="#f0f0f0" font-size="18" font-weight="700">Computer Vision</text></g>
+</g>
+<path d="M585 325H1110" stroke="#202020"/><text x="585" y="348" class="mono" fill="#5e5e5e" font-size="10" letter-spacing="1.5">OBSERVE / MODEL / TRAIN / EVALUATE / REFINE</text>
+</svg>
