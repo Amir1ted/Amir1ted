@@ -1,36 +1,36 @@
-name: Blue Contribution Snake
+name: Monochrome Contribution Snake
 
 on:
   schedule:
-    - cron: "15 0 * * *"
+    - cron: "17 0 * * *"
   workflow_dispatch:
 
 permissions:
   contents: write
 
 jobs:
-  generate:
+  build:
     runs-on: ubuntu-latest
-    timeout-minutes: 5
+    timeout-minutes: 8
     steps:
       - uses: actions/checkout@v4
 
-      - name: Generate blue snake SVG
+      - name: Generate black & white contribution snake
         uses: Platane/snk/svg-only@v3
         with:
           github_user_name: ${{ github.repository_owner }}
           outputs: |
-            assets/github-snake-blue.svg?palette=github-dark&color_snake=#00A6FF&color_dots=#0D1117,#062A4F,#0B4F8A,#0A84FF,#58A6FF
+            assets/contribution-snake.svg?color_snake=#ffffff&color_dots=#0a0a0a,#222222,#555555,#a0a0a0,#f2f2f2
 
-      - name: Commit updated snake
+      - name: Commit refreshed snake
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add assets/github-snake-blue.svg
+          git add assets/contribution-snake.svg
           if git diff --cached --quiet; then
-            echo "No snake changes"
+            echo "No snake changes."
             exit 0
           fi
-          git commit -m "chore(profile): refresh blue contribution snake"
+          git commit -m "chore(profile): refresh monochrome contribution snake"
           git pull --rebase origin main
           git push

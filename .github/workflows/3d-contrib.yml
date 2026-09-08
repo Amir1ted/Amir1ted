@@ -1,8 +1,8 @@
-name: 3D Profile Contributions
+name: Monochrome 3D Contributions
 
 on:
   schedule:
-    - cron: "45 0 * * *"
+    - cron: "37 0 * * *"
   workflow_dispatch:
 
 permissions:
@@ -11,25 +11,28 @@ permissions:
 jobs:
   build:
     runs-on: ubuntu-latest
-    timeout-minutes: 10
+    timeout-minutes: 15
     steps:
       - uses: actions/checkout@v4
 
-      - name: Generate 3D contribution calendar
+      - name: Generate 3D contribution SVGs
         uses: yoshi389111/github-profile-3d-contrib@v0.9.2
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           USERNAME: ${{ github.repository_owner }}
 
-      - name: Commit generated SVGs
+      - name: Convert every generated style to monochrome
+        run: python scripts/monochrome_3d.py
+
+      - name: Commit refreshed 3D profile
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
           git add profile-3d-contrib/
           if git diff --cached --quiet; then
-            echo "No 3D contribution changes"
+            echo "No 3D changes."
             exit 0
           fi
-          git commit -m "chore(profile): refresh 3D contributions"
+          git commit -m "chore(profile): refresh monochrome 3D contributions"
           git pull --rebase origin main
           git push
