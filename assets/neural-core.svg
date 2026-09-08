@@ -1,0 +1,60 @@
+<svg width="1200" height="360" viewBox="0 0 1200 360" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1200" y2="360">
+      <stop stop-color="#07111F"/><stop offset="0.55" stop-color="#0D1117"/><stop offset="1" stop-color="#061B33"/>
+    </linearGradient>
+    <linearGradient id="blue" x1="340" y1="60" x2="860" y2="300">
+      <stop stop-color="#58A6FF"/><stop offset="0.5" stop-color="#00A6FF"/><stop offset="1" stop-color="#0057FF"/>
+    </linearGradient>
+    <radialGradient id="core" cx="50%" cy="50%" r="50%"><stop stop-color="#00A6FF" stop-opacity=".45"/><stop offset="1" stop-color="#00A6FF" stop-opacity="0"/></radialGradient>
+    <filter id="glow" x="-100%" y="-100%" width="300%" height="300%">
+      <feGaussianBlur stdDeviation="5" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+    <pattern id="grid" width="28" height="28" patternUnits="userSpaceOnUse"><path d="M28 0H0V28" fill="none" stroke="#16304C" stroke-width="1" opacity=".35"/></pattern>
+  </defs>
+  <rect width="1200" height="360" rx="28" fill="url(#bg)"/>
+  <rect x="1" y="1" width="1198" height="358" rx="27" fill="none" stroke="#1D4D7A"/>
+  <rect width="1200" height="360" rx="28" fill="url(#grid)" opacity=".45"/>
+
+  <text x="62" y="74" fill="#58A6FF" font-size="18" font-family="monospace" letter-spacing="3">AMIR1TED // NEURAL PROFILE</text>
+  <text x="62" y="132" fill="#FFFFFF" font-size="42" font-weight="700" font-family="Arial, sans-serif">Artificial Intelligence</text>
+  <text x="62" y="180" fill="#A8C7E8" font-size="28" font-family="Arial, sans-serif">Machine Learning · Computer Vision</text>
+  <text x="62" y="232" fill="#7EA8CE" font-size="17" font-family="monospace">Computer Engineering Student · Iran · Python-first</text>
+  <text x="62" y="292" fill="#00A6FF" font-size="16" font-family="monospace">STATUS: LEARNING // BUILDING // ITERATING</text>
+  <circle cx="395" cy="287" r="4" fill="#00A6FF"><animate attributeName="opacity" values=".25;1;.25" dur="1.4s" repeatCount="indefinite"/></circle>
+
+  <g transform="translate(900 180)">
+    <circle r="132" fill="url(#core)"/>
+    <circle r="108" fill="none" stroke="#1D5E96" stroke-width="1.5" stroke-dasharray="7 10">
+      <animateTransform attributeName="transform" type="rotate" from="0" to="360" dur="18s" repeatCount="indefinite"/>
+    </circle>
+    <circle r="78" fill="none" stroke="#00A6FF" stroke-width="2" stroke-dasharray="3 8" opacity=".9">
+      <animateTransform attributeName="transform" type="rotate" from="360" to="0" dur="11s" repeatCount="indefinite"/>
+    </circle>
+    <polygon points="0,-53 46,-27 46,27 0,53 -46,27 -46,-27" fill="#081B2D" stroke="url(#blue)" stroke-width="3" filter="url(#glow)">
+      <animate attributeName="stroke-width" values="2;4;2" dur="2.2s" repeatCount="indefinite"/>
+    </polygon>
+    <circle r="18" fill="#00A6FF" filter="url(#glow)"><animate attributeName="r" values="14;20;14" dur="1.8s" repeatCount="indefinite"/></circle>
+    <circle r="5" fill="#EAF6FF"/>
+
+    <g stroke="#3E8BC5" stroke-width="1.5" opacity=".9">
+      <path d="M0-53L0-96"/><path d="M46-27L84-49"/><path d="M46 27L84 49"/><path d="M0 53L0 96"/><path d="M-46 27L-84 49"/><path d="M-46-27L-84-49"/>
+    </g>
+    <g fill="#58A6FF" filter="url(#glow)">
+      <circle cx="0" cy="-96" r="6"><animate attributeName="r" values="4;7;4" dur="2s" repeatCount="indefinite"/></circle>
+      <circle cx="84" cy="-49" r="6"><animate attributeName="r" values="7;4;7" dur="2.4s" repeatCount="indefinite"/></circle>
+      <circle cx="84" cy="49" r="6"><animate attributeName="opacity" values=".35;1;.35" dur="1.7s" repeatCount="indefinite"/></circle>
+      <circle cx="0" cy="96" r="6"><animate attributeName="r" values="4;7;4" dur="2.1s" repeatCount="indefinite"/></circle>
+      <circle cx="-84" cy="49" r="6"><animate attributeName="opacity" values="1;.35;1" dur="1.8s" repeatCount="indefinite"/></circle>
+      <circle cx="-84" cy="-49" r="6"><animate attributeName="r" values="7;4;7" dur="2.3s" repeatCount="indefinite"/></circle>
+    </g>
+    <circle cx="0" cy="-108" r="4" fill="#FFFFFF" filter="url(#glow)">
+      <animateTransform attributeName="transform" type="rotate" from="0 0 0" to="360 0 0" dur="6s" repeatCount="indefinite"/>
+    </circle>
+  </g>
+
+  <rect x="30" y="328" width="1140" height="2" rx="1" fill="#10283F"/>
+  <rect x="30" y="328" width="130" height="2" rx="1" fill="#00A6FF">
+    <animate attributeName="x" values="30;1040;30" dur="5s" repeatCount="indefinite"/>
+  </rect>
+</svg>

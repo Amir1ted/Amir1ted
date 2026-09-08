@@ -1,0 +1,5 @@
+<svg width="1200" height="180" viewBox="0 0 1200 180" xmlns="http://www.w3.org/2000/svg">
+<rect width="1200" height="180" rx="18" fill="#0D1117" stroke="#1D4D7A"/>
+<text x="600" y="82" text-anchor="middle" fill="#00A6FF" font-family="monospace" font-size="18">Run “3D Profile Contributions” in GitHub Actions</text>
+<text x="600" y="112" text-anchor="middle" fill="#6E94B8" font-family="monospace" font-size="13">this placeholder will be replaced by the generated contribution landscape</text>
+</svg>

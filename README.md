@@ -1,118 +1,196 @@
-<div align="center">
-
-<img src="https://capsule-render.vercel.app/api?type=waving&color=0:0f0c29,50:302b63,100:24243e&height=200&section=header&text=AMIR&fontSize=72&fontColor=b16cea&animation=fadeIn&fontAlignY=36&desc=Python%20%C2%B7%20AI%20%C2%B7%20Machine%20Learning%20%C2%B7%20Computer%20Vision&descAlignY=58&descSize=16" width="100%" />
-
-# Hey there <img src="https://raw.githubusercontent.com/MartinHeinz/MartinHeinz/master/wave.gif" width="32px" />
+<!-- ========================================================= -->
+<!-- AMIR1TED — BLUE NEURAL PROFILE                             -->
+<!-- Original profile concept inspired by modern profile READMEs -->
+<!-- Custom identity, visuals and animations built for Amir.     -->
+<!-- ========================================================= -->
 
 <a href="https://github.com/Amir1ted">
-  <img src="https://readme-typing-svg.demolab.com?font=JetBrains+Mono&weight=600&size=21&pause=1200&duration=3200&color=B16CEA&background=0D1117&center=true&vCenter=true&multiline=false&width=800&height=64&lines=%3E+my+code+doesn't+have+bugs%2C+it+has+undocumented+features;%3E+it+works+on+my+machine+%C2%AF%5C_(%E3%83%84)_%2F%C2%AF;%3E+99+little+bugs+in+the+code...+127+little+bugs+in+the+code;%3E+!false+%E2%80%94+it's+funny+because+it's+true;%3E+2+hard+things+in+CS%3A+cache+invalidation+and+naming+things;%3E+there+are+10+types+of+people%3A+those+who+read+binary" alt="programming jokes" />
+  <img width="100%" src="https://capsule-render.vercel.app/api?type=waving&height=270&color=0:0D1117,48:003A70,100:00A6FF&text=Amir&fontColor=FFFFFF&fontSize=86&fontAlignY=35&animation=fadeIn&desc=Computer%20Engineering%20Student%20%E2%80%A2%20AI%20%E2%80%A2%20ML%20%E2%80%A2%20Computer%20Vision&descAlignY=57&descSize=20" alt="Amir — AI, ML and Computer Vision" />
 </a>
 
-<img src="https://komarev.com/ghpvc/?username=Amir1ted&label=PROFILE+VIEWS&color=8a2be2&style=for-the-badge" />
+<p align="center">
+  <img src="./assets/neural-core.svg" width="100%" alt="Amir neural profile core" />
+</p>
 
-</div>
-
----
-
-## <img src="https://user-images.githubusercontent.com/74038190/216122069-5b8169d7-1d8e-4a13-b245-a8e4176c99f8.png" width="32" alt="target" /> &nbsp;Current Focus
-
-My end-to-end workflow when I build a computer-vision project:
-
-```mermaid
-%%{init: {'theme':'dark','themeVariables':{'primaryColor':'#302b63','primaryTextColor':'#ffffff','primaryBorderColor':'#b16cea','lineColor':'#b16cea','secondaryColor':'#24243e','tertiaryColor':'#0f0c29','fontFamily':'JetBrains Mono'}}}%%
-flowchart LR
-    A[📷 Data<br/>images / video] --> B[🧹 Preprocess<br/>OpenCV · NumPy]
-    B --> C[🧠 Train<br/>PyTorch · TensorFlow]
-    C --> D[🎯 Detect<br/>YOLO · CNNs]
-    D --> E[📈 Evaluate<br/>metrics · tuning]
-    E --> F[🚀 Ship<br/>Docker · Linux]
-    F -.-> A
-```
-
----
-
-## <img src="https://user-images.githubusercontent.com/74038190/216120986-f2752ca9-fe82-4aa3-befe-0a58db010d85.png" width="32" alt="smiling face" /> &nbsp;About Me
-
-```yaml
-name:      Amir
-location:  Iran
-role:      Computer Engineering Student
-focus:     Artificial Intelligence · Machine Learning · Computer Vision
-language:  Python (main)
-os:        Ubuntu Linux
-learning:  Computer Vision — deep dive
-```
-
----
-
-## <img src="https://user-images.githubusercontent.com/74038190/216122028-c05b52fb-983e-4ee8-8811-6f30cd9ea5d5.png" width="32" alt="comet" /> &nbsp;Tech Stack
+<p align="center">
+  <a href="https://github.com/Amir1ted">
+    <img src="https://img.shields.io/badge/%40Amir1ted-00A6FF?style=for-the-badge&logo=github&logoColor=white&labelColor=0D1117" alt="GitHub @Amir1ted" />
+  </a>
+</p>
 
 <div align="center">
-
-**Languages**
-
-![Python](https://img.shields.io/badge/Python-0F0C29?style=for-the-badge&logo=python&logoColor=B16CEA)
-![C++](https://img.shields.io/badge/C++-0F0C29?style=for-the-badge&logo=cplusplus&logoColor=B16CEA)
-![PHP](https://img.shields.io/badge/PHP-0F0C29?style=for-the-badge&logo=php&logoColor=B16CEA)
-![JavaScript](https://img.shields.io/badge/JavaScript-0F0C29?style=for-the-badge&logo=javascript&logoColor=B16CEA)
-![HTML5](https://img.shields.io/badge/HTML5-0F0C29?style=for-the-badge&logo=html5&logoColor=B16CEA)
-![CSS3](https://img.shields.io/badge/CSS3-0F0C29?style=for-the-badge&logo=css3&logoColor=B16CEA)
-![Verilog](https://img.shields.io/badge/Verilog-0F0C29?style=for-the-badge&logo=verilog&logoColor=B16CEA)
-
-**AI / ML / Computer Vision**
-
-![PyTorch](https://img.shields.io/badge/PyTorch-0F0C29?style=for-the-badge&logo=pytorch&logoColor=B16CEA)
-![TensorFlow](https://img.shields.io/badge/TensorFlow-0F0C29?style=for-the-badge&logo=tensorflow&logoColor=B16CEA)
-![OpenCV](https://img.shields.io/badge/OpenCV-0F0C29?style=for-the-badge&logo=opencv&logoColor=B16CEA)
-![YOLO](https://img.shields.io/badge/YOLO-0F0C29?style=for-the-badge&logo=yolo&logoColor=B16CEA)
-![scikit-learn](https://img.shields.io/badge/scikit--learn-0F0C29?style=for-the-badge&logo=scikitlearn&logoColor=B16CEA)
-![NumPy](https://img.shields.io/badge/NumPy-0F0C29?style=for-the-badge&logo=numpy&logoColor=B16CEA)
-![pandas](https://img.shields.io/badge/pandas-0F0C29?style=for-the-badge&logo=pandas&logoColor=B16CEA)
-
-**Tools & OS**
-
-![Git](https://img.shields.io/badge/Git-0F0C29?style=for-the-badge&logo=git&logoColor=B16CEA)
-![Docker](https://img.shields.io/badge/Docker-0F0C29?style=for-the-badge&logo=docker&logoColor=B16CEA)
-![Ubuntu](https://img.shields.io/badge/Ubuntu-0F0C29?style=for-the-badge&logo=ubuntu&logoColor=B16CEA)
-![Linux](https://img.shields.io/badge/Linux-0F0C29?style=for-the-badge&logo=linux&logoColor=B16CEA)
-![Bash](https://img.shields.io/badge/Bash-0F0C29?style=for-the-badge&logo=gnubash&logoColor=B16CEA)
-
+  <img src="https://readme-typing-svg.demolab.com?font=JetBrains+Mono&weight=600&size=27&duration=2600&pause=850&color=00A6FF&center=true&vCenter=true&width=950&lines=Hi%2C+I%27m+Amir+%F0%9F%91%8B;Computer+Engineering+Student;Python-first+%7C+AI+%7C+ML+%7C+Computer+Vision;Learning+how+machines+see+and+understand;Classification+%E2%86%92+Detection+%E2%86%92+Segmentation;Turning+pixels+into+useful+signals;Learn+deeply.+Build+simply.+Improve+continuously." alt="Animated introduction" />
 </div>
 
----
+<p align="center">
+  <a href="https://github.com/Amir1ted"><img src="https://komarev.com/ghpvc/?username=Amir1ted&label=PROFILE%20VIEWS&color=00A6FF&style=for-the-badge" alt="Profile views" /></a>
+  <a href="https://github.com/Amir1ted?tab=followers"><img src="https://img.shields.io/github/followers/Amir1ted?label=FOLLOWERS&style=for-the-badge&color=1677FF&labelColor=0D1117&logo=github" alt="Followers" /></a>
+  <a href="https://github.com/Amir1ted?tab=repositories"><img src="https://img.shields.io/github/stars/Amir1ted?affiliations=OWNER&label=STARS&style=for-the-badge&color=0057FF&labelColor=0D1117&logo=github" alt="Stars" /></a>
+</p>
 
-## <img src="https://user-images.githubusercontent.com/74038190/216122041-518ac897-8d92-4c6b-9b3f-ca01dcaf38ee.png" width="32" alt="fire" /> &nbsp;GitHub Stats
+<p align="center">
+  <img src="./assets/blue-divider.svg" width="100%" alt="" />
+</p>
 
-<div align="center">
+<h2 align="center">🧠 About Me</h2>
 
-<img height="170" src="https://github-readme-streak-stats.herokuapp.com/?user=Amir1ted&hide_border=true&background=0D1117&stroke=302B63&ring=B16CEA&fire=8A2BE2&currStreakLabel=B16CEA&sideLabels=C9D1D9&dates=8B949E&sideNums=C9D1D9&currStreakNum=C9D1D9" />
+```python
+class Amir:
+    """Computer Engineering student focused on intelligent visual systems."""
 
-<img height="170" src="https://github-profile-summary-cards.vercel.app/api/cards/repos-per-language?username=Amir1ted&theme=github_dark" />
-<img height="170" src="https://github-profile-summary-cards.vercel.app/api/cards/most-commit-language?username=Amir1ted&theme=github_dark" />
+    name          = "Amir"
+    location      = "Iran"
+    role          = "Computer Engineering Student"
+    main_language = "Python"
 
-<img height="170" src="https://github-profile-summary-cards.vercel.app/api/cards/stats?username=Amir1ted&theme=github_dark" />
-<img height="170" src="https://github-profile-summary-cards.vercel.app/api/cards/productive-time?username=Amir1ted&theme=github_dark&utcOffset=3.5" />
+    focus = [
+        "Artificial Intelligence",
+        "Machine Learning",
+        "Computer Vision",
+    ]
 
-</div>
+    learning_path = [
+        "Image Classification",
+        "Object Detection",
+        "Image Segmentation",
+    ]
 
----
+    environment = "Ubuntu Linux"
 
-## <img src="https://user-images.githubusercontent.com/74038190/216120974-24a76b31-7f39-41f1-a38f-b3c1377cc612.png" width="32" alt="teacup" /> &nbsp;Dev Quote
+    def philosophy(self) -> str:
+        return "Learn deeply. Build simply. Improve continuously."
 
-<div align="center">
 
-<img src="https://quotes-github-readme.vercel.app/api?type=horizontal&theme=radical" />
-
-</div>
-
----
-
-<div align="center">
-
-```
-▸ while (alive) { learn(); build(); repeat(); }
+me = Amir()
+print(me.philosophy())
 ```
 
-<img src="https://capsule-render.vercel.app/api?type=waving&color=0:24243e,50:302b63,100:0f0c29&height=140&section=footer" width="100%" />
+<p align="center">
+  <i>I am interested in the point where software stops merely processing data and starts understanding visual information.</i>
+</p>
 
+<p align="center">
+  <img src="./assets/blue-divider.svg" width="100%" alt="" />
+</p>
+
+<h2 align="center">👁️ Computer Vision Pipeline</h2>
+
+<p align="center">
+  <img src="./assets/vision-pipeline.svg" width="100%" alt="Computer vision end-to-end pipeline" />
+</p>
+
+<h2 align="center">🎯 Current Learning Map</h2>
+
+<p align="center">
+  <img src="./assets/focus-grid.svg" width="100%" alt="Classification, detection and segmentation learning map" />
+</p>
+
+<p align="center">
+  <img src="./assets/blue-divider.svg" width="100%" alt="" />
+</p>
+
+<h2 align="center">⚙️ Toolbox & Ecosystem</h2>
+
+<p align="center"><b>Core</b></p>
+<p align="center">
+  <img src="https://skillicons.dev/icons?i=python,linux,git,github&theme=dark" alt="Python Linux Git GitHub" />
+</p>
+
+<p align="center"><b>AI / ML / Computer Vision — learning & building ecosystem</b></p>
+<p align="center">
+  <img src="https://skillicons.dev/icons?i=pytorch,tensorflow,opencv,numpy&theme=dark" alt="PyTorch TensorFlow OpenCV NumPy" />
+</p>
+
+<p align="center"><b>Development Environment</b></p>
+<p align="center">
+  <img src="https://skillicons.dev/icons?i=vscode,ubuntu,bash&theme=dark" alt="VS Code Ubuntu Bash" />
+</p>
+
+<p align="center">
+  <img src="https://img.shields.io/badge/PRIMARY-PYTHON-00A6FF?style=for-the-badge&labelColor=0D1117&logo=python&logoColor=white" />
+  <img src="https://img.shields.io/badge/FOCUS-COMPUTER%20VISION-1677FF?style=for-the-badge&labelColor=0D1117" />
+  <img src="https://img.shields.io/badge/MINDSET-LEARN%20%3E%20BUILD%20%3E%20ITERATE-0057FF?style=for-the-badge&labelColor=0D1117" />
+</p>
+
+<p align="center">
+  <img src="./assets/blue-divider.svg" width="100%" alt="" />
+</p>
+
+<h2 align="center">📊 GitHub Analytics</h2>
+
+<p align="center">
+  <img height="170" src="https://github-readme-stats.vercel.app/api?username=Amir1ted&show_icons=true&include_all_commits=true&count_private=true&hide_border=false&border_radius=12&title_color=00A6FF&icon_color=58A6FF&text_color=C9D1D9&bg_color=0D1117&border_color=1D4D7A" alt="Amir GitHub stats" />
+  <img height="170" src="https://github-readme-stats.vercel.app/api/top-langs/?username=Amir1ted&layout=compact&langs_count=8&hide_border=false&border_radius=12&title_color=00A6FF&text_color=C9D1D9&bg_color=0D1117&border_color=1D4D7A" alt="Top languages" />
+</p>
+
+<p align="center">
+  <img src="https://streak-stats.demolab.com?user=Amir1ted&background=0D1117&border=1D4D7A&ring=00A6FF&fire=58A6FF&currStreakNum=FFFFFF&sideNums=FFFFFF&currStreakLabel=00A6FF&sideLabels=7EA8CE&dates=5F83A4&stroke=16304C" alt="GitHub streak" />
+</p>
+
+<p align="center">
+  <img width="96%" src="https://github-readme-activity-graph.vercel.app/graph?username=Amir1ted&bg_color=0D1117&color=7EA8CE&line=00A6FF&point=FFFFFF&area=true&area_color=003A70&hide_border=true&radius=12" alt="Contribution activity graph" />
+</p>
+
+<p align="center">
+  <img src="./assets/blue-divider.svg" width="100%" alt="" />
+</p>
+
+<h2 align="center">🚀 Selected Builds</h2>
+
+<p align="center">
+  <a href="https://github.com/Amir1ted/calculator">
+    <img src="https://github-readme-stats.vercel.app/api/pin/?username=Amir1ted&repo=calculator&title_color=00A6FF&text_color=C9D1D9&icon_color=58A6FF&bg_color=0D1117&border_color=1D4D7A&border_radius=12" alt="calculator" />
+  </a>
+  <a href="https://github.com/Amir1ted/tailscale-installer">
+    <img src="https://github-readme-stats.vercel.app/api/pin/?username=Amir1ted&repo=tailscale-installer&title_color=00A6FF&text_color=C9D1D9&icon_color=58A6FF&bg_color=0D1117&border_color=1D4D7A&border_radius=12" alt="tailscale installer" />
+  </a>
+</p>
+
+<p align="center">
+  <a href="https://github.com/Amir1ted/pdf-merger">
+    <img src="https://github-readme-stats.vercel.app/api/pin/?username=Amir1ted&repo=pdf-merger&title_color=00A6FF&text_color=C9D1D9&icon_color=58A6FF&bg_color=0D1117&border_color=1D4D7A&border_radius=12" alt="pdf merger" />
+  </a>
+  <a href="https://github.com/Amir1ted/Algorithms">
+    <img src="https://github-readme-stats.vercel.app/api/pin/?username=Amir1ted&repo=Algorithms&title_color=00A6FF&text_color=C9D1D9&icon_color=58A6FF&bg_color=0D1117&border_color=1D4D7A&border_radius=12" alt="Algorithms" />
+  </a>
+</p>
+
+> **Next evolution:** replace these cards with dedicated AI/CV projects as they are published — classification, detection, segmentation and end-to-end vision systems.
+
+<p align="center">
+  <img src="./assets/blue-divider.svg" width="100%" alt="" />
+</p>
+
+<h2 align="center">🐍 Contribution Stream</h2>
+
+<p align="center">
+  <img src="./assets/github-snake-blue.svg" width="100%" alt="Blue contribution snake animation" />
+</p>
+
+<sub>Generated automatically by GitHub Actions. Run the workflow once after adding these files.</sub>
+
+<h2 align="center">🌌 3D Contribution Landscape</h2>
+
+<p align="center">
+  <img src="./profile-3d-contrib/profile-night-view.svg" width="100%" alt="3D contribution graph" />
+</p>
+
+<sub>Generated automatically by the included 3D contribution workflow.</sub>
+
+<p align="center">
+  <img src="./assets/blue-divider.svg" width="100%" alt="" />
+</p>
+
+<h2 align="center">📡 Signal</h2>
+
+<p align="center">
+  <code>pixels → patterns → predictions → understanding</code>
+</p>
+
+<p align="center">
+  <a href="https://github.com/Amir1ted?tab=repositories"><img src="https://img.shields.io/badge/EXPLORE_MY_REPOSITORIES-00A6FF?style=for-the-badge&labelColor=0D1117&logo=github&logoColor=white" alt="Explore repositories" /></a>
+</p>
+
+<div align="center">
+  <img width="100%" src="https://capsule-render.vercel.app/api?type=waving&height=150&section=footer&color=0:0D1117,50:003A70,100:00A6FF" alt="Blue footer" />
 </div>

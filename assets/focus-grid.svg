@@ -1,0 +1,37 @@
+<svg width="1200" height="310" viewBox="0 0 1200 310" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1200" y2="310"><stop stop-color="#071421"/><stop offset="1" stop-color="#0D1117"/></linearGradient>
+    <filter id="glow"><feGaussianBlur stdDeviation="2.5" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
+  </defs>
+  <rect width="1200" height="310" rx="24" fill="url(#bg)" stroke="#1D4D7A"/>
+  <text x="40" y="42" fill="#58A6FF" font-size="15" font-family="monospace" letter-spacing="2">CURRENT LEARNING MAP</text>
+
+  <g font-family="Arial, sans-serif">
+    <g transform="translate(45 70)">
+      <rect width="350" height="190" rx="20" fill="#091B2B" stroke="#1E5C90"/>
+      <text x="24" y="43" fill="#00A6FF" font-size="19" font-weight="700">01 / Classification</text>
+      <text x="24" y="80" fill="#D7E9F8" font-size="15">What is in the image?</text>
+      <text x="24" y="113" fill="#7399BB" font-size="13">labels · features · confidence</text>
+      <path d="M25 151H320" stroke="#173E60"/><path d="M25 151H210" stroke="#00A6FF" stroke-width="3"><animate attributeName="x2" values="25;210;25" dur="3.2s" repeatCount="indefinite"/></path>
+      <text x="24" y="176" fill="#5F83A4" font-size="12" font-family="monospace">LEARN → BUILD → EVALUATE</text>
+    </g>
+    <g transform="translate(425 70)">
+      <rect width="350" height="190" rx="20" fill="#091B2B" stroke="#1E5C90"/>
+      <text x="24" y="43" fill="#00A6FF" font-size="19" font-weight="700">02 / Detection</text>
+      <text x="24" y="80" fill="#D7E9F8" font-size="15">What is it, and where?</text>
+      <text x="24" y="113" fill="#7399BB" font-size="13">boxes · classes · localization</text>
+      <rect x="248" y="82" width="60" height="44" rx="5" fill="none" stroke="#58A6FF" stroke-width="2"><animate attributeName="x" values="236;255;236" dur="2.7s" repeatCount="indefinite"/></rect>
+      <text x="24" y="176" fill="#5F83A4" font-size="12" font-family="monospace">LOCALIZE → SCORE → REFINE</text>
+    </g>
+    <g transform="translate(805 70)">
+      <rect width="350" height="190" rx="20" fill="#091B2B" stroke="#1E5C90"/>
+      <text x="24" y="43" fill="#00A6FF" font-size="19" font-weight="700">03 / Segmentation</text>
+      <text x="24" y="80" fill="#D7E9F8" font-size="15">Which exact pixels belong?</text>
+      <text x="24" y="113" fill="#7399BB" font-size="13">masks · regions · pixel labels</text>
+      <g transform="translate(258 88)" fill="#1677FF" opacity=".8" filter="url(#glow)">
+        <circle cx="0" cy="0" r="7"><animate attributeName="opacity" values=".3;1;.3" dur="1.4s" repeatCount="indefinite"/></circle><circle cx="18" cy="5" r="7"><animate attributeName="opacity" values="1;.3;1" dur="1.6s" repeatCount="indefinite"/></circle><circle cx="8" cy="18" r="7"><animate attributeName="opacity" values=".5;1;.5" dur="1.8s" repeatCount="indefinite"/></circle><circle cx="25" cy="20" r="7"><animate attributeName="opacity" values="1;.4;1" dur="1.3s" repeatCount="indefinite"/></circle>
+      </g>
+      <text x="24" y="176" fill="#5F83A4" font-size="12" font-family="monospace">PIXEL → MASK → UNDERSTAND</text>
+    </g>
+  </g>
+</svg>
