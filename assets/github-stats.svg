@@ -7,7 +7,7 @@
         <g transform="translate(48 132)">
           <rect width="211" height="92" rx="12" fill="#080808" stroke="#242424"/>
           <text x="18" y="24" fill="#585858" font-family="ui-monospace, monospace" font-size="9" letter-spacing="1.7">CONTRIBUTIONS</text>
-          <text x="18" y="59" fill="#efefef" font-family="Georgia, serif" font-size="27" font-weight="700">308</text>
+          <text x="18" y="59" fill="#efefef" font-family="Georgia, serif" font-size="27" font-weight="700">311</text>
           <text x="18" y="78" fill="#444444" font-family="ui-monospace, monospace" font-size="8" letter-spacing="1.2">LAST 365 DAYS</text>
         </g>
         <g transform="translate(279 132)">
@@ -43,7 +43,7 @@
         <g transform="translate(510 248)">
           <rect width="211" height="92" rx="12" fill="#080808" stroke="#242424"/>
           <text x="18" y="24" fill="#585858" font-family="ui-monospace, monospace" font-size="9" letter-spacing="1.7">ACTIVE DAYS</text>
-          <text x="18" y="59" fill="#efefef" font-family="Georgia, serif" font-size="27" font-weight="700">40</text>
+          <text x="18" y="59" fill="#efefef" font-family="Georgia, serif" font-size="27" font-weight="700">41</text>
           <text x="18" y="78" fill="#444444" font-family="ui-monospace, monospace" font-size="8" letter-spacing="1.2">LAST 365 DAYS</text>
         </g>
         <g transform="translate(741 248)">
