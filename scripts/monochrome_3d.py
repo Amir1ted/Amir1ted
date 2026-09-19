@@ -14,7 +14,7 @@ HSL = re.compile(r"hsla?\(\s*([\d.]+)\s*,\s*([\d.]+)%\s*,\s*([\d.]+)%(\s*,\s*[\d
 BG = "#05070a"
 FG = "#e4e9ef"
 STRONG = "#c5ccd4"
-WEAK = "#6f7a86"
+WEAK = "#8b96a2"
 
 CONTRIBUTION_FILL = re.compile(
     r"(\.cont-(top|left|right)-p\d+-(\d+)\s*\{\s*fill\s*:\s*)[^;}}]+",

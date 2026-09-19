@@ -18,29 +18,13 @@
 
 <div align="center"><img src="./assets/divider.svg" width="100%" alt="" /></div>
 
-## `03 / SELECTED WORK`
-
-<div align="center">
-  <img src="./assets/selected-work.svg" width="100%" alt="Selected work — see pinned repositories below the profile README" />
-</div>
-
-<div align="center"><img src="./assets/divider.svg" width="100%" alt="" /></div>
-
-## `04 / CURRENT FOCUS`
-
-<div align="center">
-  <img src="./assets/current-focus.svg" width="100%" alt="Current focus: AI engineering, machine learning and computer vision" />
-</div>
-
-<div align="center"><img src="./assets/divider.svg" width="100%" alt="" /></div>
-
 ## `05 / CONTRIBUTION GRAPH`
 
 <div align="center">
   <img src="./assets/contribution-graph.svg" width="100%" alt="Amirhosse1n GitHub contribution graph for the last 365 days" />
 </div>
 
-<details>
+<details open>
   <summary><b>Contribution animation</b></summary>
   <br />
   <div align="center">

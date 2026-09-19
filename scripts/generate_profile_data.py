@@ -144,8 +144,8 @@ def write_graph(username: str, calendar: dict, output: Path) -> None:
         if day.day <= 7 and month_key != seen_month and dow == 0:
             seen_month = month_key
             month_labels.append(
-                f'<text x="{x}" y="123" fill="#59636F" '
-                f'font-family="ui-monospace, monospace" font-size="8.5" letter-spacing=".8">'
+                f'<text x="{x}" y="123" fill="#ADB7C1" '
+                f'font-family="ui-monospace, monospace" font-size="9.5" letter-spacing=".8">'
                 f'{day.strftime("%b").upper()}</text>'
             )
 
@@ -160,19 +160,19 @@ def write_graph(username: str, calendar: dict, output: Path) -> None:
   <desc id="desc">GitHub contribution activity for the last 365 days. {total} contributions in the displayed period.</desc>
   <rect width="1000" height="300" rx="22" fill="#05070A"/>
   <text x="52" y="57" fill="#E8EDF3" font-family="Georgia, 'Times New Roman', serif" font-size="29" letter-spacing="3">CONTRIBUTION / GRAPH</text>
-  <text x="52" y="83" fill="#606B77" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="9.5" letter-spacing="2.7">LAST 365 DAYS · LIVE GITHUB ACTIVITY</text>
+  <text x="52" y="83" fill="#C0C8D1" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="11.5" font-weight="500" letter-spacing="2.7">LAST 365 DAYS · LIVE GITHUB ACTIVITY</text>
   <text x="948" y="57" text-anchor="end" fill="#AAB3BD" font-family="ui-monospace, monospace" font-size="12" letter-spacing="1.2">{total} CONTRIBUTIONS</text>
   <path d="M52 103H948" stroke="#20262E"/>
   {''.join(month_labels)}
-  <text x="45" y="151" fill="#4F5965" font-family="ui-monospace, monospace" font-size="7.5">SUN</text>
-  <text x="45" y="181" fill="#4F5965" font-family="ui-monospace, monospace" font-size="7.5">TUE</text>
-  <text x="45" y="211" fill="#4F5965" font-family="ui-monospace, monospace" font-size="7.5">THU</text>
-  <text x="45" y="241" fill="#4F5965" font-family="ui-monospace, monospace" font-size="7.5">SAT</text>
+  <text x="45" y="151" fill="#A5AFBA" font-family="ui-monospace, monospace" font-size="8.5">SUN</text>
+  <text x="45" y="181" fill="#A5AFBA" font-family="ui-monospace, monospace" font-size="8.5">TUE</text>
+  <text x="45" y="211" fill="#A5AFBA" font-family="ui-monospace, monospace" font-size="8.5">THU</text>
+  <text x="45" y="241" fill="#A5AFBA" font-family="ui-monospace, monospace" font-size="8.5">SAT</text>
   {''.join(rects)}
   <g transform="translate(808 276)">
-    <text x="-42" y="0" fill="#4F5965" font-family="ui-monospace, monospace" font-size="7.5">LESS</text>
+    <text x="-42" y="0" fill="#A5AFBA" font-family="ui-monospace, monospace" font-size="8.5">LESS</text>
     {legend}
-    <text x="98" y="0" fill="#4F5965" font-family="ui-monospace, monospace" font-size="7.5">MORE</text>
+    <text x="98" y="0" fill="#A5AFBA" font-family="ui-monospace, monospace" font-size="8.5">MORE</text>
   </g>
 </svg>'''
     output.write_text(svg, encoding="utf-8")

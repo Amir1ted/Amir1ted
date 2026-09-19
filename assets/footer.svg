@@ -4,5 +4,5 @@
   <circle cx="500" cy="39" r="3" fill="#C5CCD4">
     <animate attributeName="opacity" values=".24;.9;.24" dur="5.4s" repeatCount="indefinite"/>
   </circle>
-  <text x="500" y="70" text-anchor="middle" fill="#58626E" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="9.5" letter-spacing="3.6">END OF SIGNAL // AMIRHOSSE1N</text>
+  <text x="500" y="70" text-anchor="middle" fill="#8D98A4" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="10.5" letter-spacing="3.6">END OF SIGNAL // AMIRHOSSE1N</text>
 </svg>

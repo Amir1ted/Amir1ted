@@ -10,27 +10,27 @@
     <rect width="430" height="92" rx="13" fill="#090C10" stroke="#20262E"/>
     <text x="24" y="30" fill="#626D79" font-family="ui-monospace, monospace" font-size="9.5" letter-spacing="2">01 / CORE</text>
     <text x="24" y="64" fill="#E5EAF0" font-family="ui-monospace, monospace" font-size="20" font-weight="700" letter-spacing="1.5">PYTHON</text>
-    <circle cx="398" cy="46" r="2.8" fill="#88929E"/>
+    <circle cx="398" cy="46" r="2.8" fill="#AEB7C1"/>
   </g>
 
   <g transform="translate(518 132)">
     <rect width="430" height="92" rx="13" fill="#090C10" stroke="#20262E"/>
     <text x="24" y="30" fill="#626D79" font-family="ui-monospace, monospace" font-size="9.5" letter-spacing="2">02 / AI &amp; DEEP LEARNING</text>
     <text x="24" y="64" fill="#E5EAF0" font-family="ui-monospace, monospace" font-size="20" font-weight="700" letter-spacing="1.5">PYTORCH · YOLO</text>
-    <circle cx="398" cy="46" r="2.8" fill="#88929E"/>
+    <circle cx="398" cy="46" r="2.8" fill="#AEB7C1"/>
   </g>
 
   <g transform="translate(52 246)">
     <rect width="430" height="92" rx="13" fill="#090C10" stroke="#20262E"/>
     <text x="24" y="30" fill="#626D79" font-family="ui-monospace, monospace" font-size="9.5" letter-spacing="2">03 / COMPUTER VISION</text>
     <text x="24" y="64" fill="#E5EAF0" font-family="ui-monospace, monospace" font-size="20" font-weight="700" letter-spacing="1.5">OPENCV</text>
-    <circle cx="398" cy="46" r="2.8" fill="#88929E"/>
+    <circle cx="398" cy="46" r="2.8" fill="#AEB7C1"/>
   </g>
 
   <g transform="translate(518 246)">
     <rect width="430" height="92" rx="13" fill="#090C10" stroke="#20262E"/>
     <text x="24" y="30" fill="#626D79" font-family="ui-monospace, monospace" font-size="9.5" letter-spacing="2">04 / ENGINEERING SYSTEMS</text>
     <text x="24" y="64" fill="#E5EAF0" font-family="ui-monospace, monospace" font-size="17.5" font-weight="700" letter-spacing="1.1">GIT · GITHUB · LINUX · DOCKER</text>
-    <circle cx="398" cy="46" r="2.8" fill="#88929E"/>
+    <circle cx="398" cy="46" r="2.8" fill="#AEB7C1"/>
   </g>
 </svg>
