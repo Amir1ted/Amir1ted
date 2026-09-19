@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1000" height="260" viewBox="0 0 1000 260" role="img" aria-labelledby="title desc">
+  <title id="title">Selected Work</title>
+  <desc id="desc">Selected projects are curated in the pinned repositories directly below the profile README.</desc>
+  <rect width="1000" height="260" rx="22" fill="#05070A"/>
+  <rect x="40" y="40" width="920" height="180" rx="16" fill="#090C10" stroke="#20262E"/>
+  <text x="76" y="87" fill="#E8EDF3" font-family="Georgia, 'Times New Roman', serif" font-size="28" letter-spacing="3">SELECTED / WORK</text>
+  <text x="76" y="119" fill="#66717D" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="9.5" letter-spacing="2.4">THE PROJECT PORTFOLIO LIVES IN THE PINNED REPOSITORIES BELOW</text>
+  <path d="M76 142H924" stroke="#20262E"/>
+  <g font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="11" letter-spacing="1.7">
+    <text x="76" y="181" fill="#AAB3BD">AI SYSTEMS</text>
+    <text x="258" y="181" fill="#414A55">/</text>
+    <text x="300" y="181" fill="#AAB3BD">MACHINE LEARNING</text>
+    <text x="548" y="181" fill="#414A55">/</text>
+    <text x="590" y="181" fill="#AAB3BD">COMPUTER VISION</text>
+  </g>
+  <text x="924" y="201" text-anchor="end" fill="#4F5965" font-family="ui-monospace, monospace" font-size="9" letter-spacing="2">CURATED, NOT DUPLICATED</text>
+</svg>

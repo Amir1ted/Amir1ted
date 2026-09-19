@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="300" height="82" viewBox="0 0 300 82" role="img" aria-label="GITHUB">
+  <rect width="300" height="82" rx="13" fill="#090C10" stroke="#20262E"/>
+  <circle cx="25" cy="24" r="3" fill="#9AA4AF"/>
+  <text x="43" y="29" fill="#E7ECF2" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="13" font-weight="700" letter-spacing="2">GITHUB</text>
+  <path d="M22 43H278" stroke="#1D232B"/>
+  <text x="22" y="64" fill="#66717D" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="8.5" letter-spacing="1.5">@amirhosse1n</text>
+  <text x="278" y="64" text-anchor="end" fill="#7C8793" font-family="ui-monospace, monospace" font-size="11">↗</text>
+</svg>

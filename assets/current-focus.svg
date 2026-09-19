@@ -1,0 +1,29 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1000" height="320" viewBox="0 0 1000 320" role="img" aria-labelledby="title desc">
+  <title id="title">Current Focus</title>
+  <desc id="desc">AI engineering, machine learning and computer vision.</desc>
+  <rect width="1000" height="320" rx="22" fill="#05070A"/>
+  <text x="52" y="57" fill="#E8EDF3" font-family="Georgia, 'Times New Roman', serif" font-size="29" letter-spacing="3">CURRENT / FOCUS</text>
+  <text x="52" y="83" fill="#606B77" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="9.5" letter-spacing="2.7">WHAT I AM BUILDING TOWARD</text>
+  <path d="M52 103H948" stroke="#20262E"/>
+
+  <g transform="translate(52 133)">
+    <rect width="282" height="132" rx="13" fill="#090C10" stroke="#20262E"/>
+    <text x="22" y="31" fill="#66717D" font-family="ui-monospace, monospace" font-size="9" letter-spacing="1.9">01 / AI ENGINEERING</text>
+    <text x="22" y="69" fill="#E5EAF0" font-family="Georgia, 'Times New Roman', serif" font-size="20">Intelligent systems</text>
+    <text x="22" y="99" fill="#747F8B" font-family="ui-monospace, monospace" font-size="9.5" letter-spacing="1">SYSTEMS · APIS · AUTOMATION</text>
+  </g>
+
+  <g transform="translate(359 133)">
+    <rect width="282" height="132" rx="13" fill="#090C10" stroke="#20262E"/>
+    <text x="22" y="31" fill="#66717D" font-family="ui-monospace, monospace" font-size="9" letter-spacing="1.9">02 / MACHINE LEARNING</text>
+    <text x="22" y="69" fill="#E5EAF0" font-family="Georgia, 'Times New Roman', serif" font-size="20">Models that improve</text>
+    <text x="22" y="99" fill="#747F8B" font-family="ui-monospace, monospace" font-size="9.5" letter-spacing="1">TRAINING · EVALUATION · ITERATION</text>
+  </g>
+
+  <g transform="translate(666 133)">
+    <rect width="282" height="132" rx="13" fill="#090C10" stroke="#20262E"/>
+    <text x="22" y="31" fill="#66717D" font-family="ui-monospace, monospace" font-size="9" letter-spacing="1.9">03 / COMPUTER VISION</text>
+    <text x="22" y="69" fill="#E5EAF0" font-family="Georgia, 'Times New Roman', serif" font-size="20">Systems that see</text>
+    <text x="22" y="99" fill="#747F8B" font-family="ui-monospace, monospace" font-size="9.5" letter-spacing="1">DETECTION · INFERENCE · PIPELINES</text>
+  </g>
+</svg>

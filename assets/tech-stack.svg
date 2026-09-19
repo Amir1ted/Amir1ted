@@ -1,15 +1,36 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="1000" height="570" viewBox="0 0 1000 570" role="img" aria-label="Technology stack">
-  <rect width="1000" height="570" rx="24" fill="#050505"/>
-  <text x="58" y="60" fill="#f1f1f1" font-family="Georgia, serif" font-size="31" letter-spacing="3">TECH / STACK</text>
-  <text x="58" y="88" fill="#666666" font-family="ui-monospace, monospace" font-size="11" letter-spacing="3">TOOLS &amp; DOMAINS I BUILD WITH</text>
-  <path d="M58 110H942" stroke="#242424"/>
+<svg xmlns="http://www.w3.org/2000/svg" width="1000" height="390" viewBox="0 0 1000 390" role="img" aria-labelledby="title desc">
+  <title id="title">Tech Stack</title>
+  <desc id="desc">Python, PyTorch, YOLO, OpenCV, Git, GitHub, Linux and Docker.</desc>
+  <rect width="1000" height="390" rx="22" fill="#05070A"/>
+  <text x="52" y="57" fill="#E8EDF3" font-family="Georgia, 'Times New Roman', serif" font-size="29" letter-spacing="3">TECH / STACK</text>
+  <text x="52" y="83" fill="#606B77" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="9.5" letter-spacing="2.7">A CURATED TOOLSET — NOT A BADGE WALL</text>
+  <path d="M52 103H948" stroke="#20262E"/>
 
-  <g transform="translate(58 140)"><rect width="420" height="74" rx="12" fill="#080808" stroke="#242424"/><text x="24" y="29" fill="#5c5c5c" font-family="ui-monospace, monospace" font-size="10" letter-spacing="2">01 / PRIMARY LANGUAGE</text><text x="24" y="56" fill="#ededed" font-family="ui-monospace, monospace" font-size="20" font-weight="700" letter-spacing="1.5">PYTHON</text><circle cx="391" cy="37" r="3" fill="#7c7c7c"/></g>
-  <g transform="translate(510 140)"><rect width="420" height="74" rx="12" fill="#080808" stroke="#242424"/><text x="24" y="29" fill="#5c5c5c" font-family="ui-monospace, monospace" font-size="10" letter-spacing="2">02 / DEEP LEARNING</text><text x="24" y="56" fill="#ededed" font-family="ui-monospace, monospace" font-size="20" font-weight="700" letter-spacing="1.5">PYTORCH</text><circle cx="391" cy="37" r="3" fill="#7c7c7c"/></g>
-  <g transform="translate(58 236)"><rect width="420" height="74" rx="12" fill="#080808" stroke="#242424"/><text x="24" y="29" fill="#5c5c5c" font-family="ui-monospace, monospace" font-size="10" letter-spacing="2">03 / COMPUTER VISION</text><text x="24" y="56" fill="#ededed" font-family="ui-monospace, monospace" font-size="20" font-weight="700" letter-spacing="1.5">OPENCV</text><circle cx="391" cy="37" r="3" fill="#7c7c7c"/></g>
-  <g transform="translate(510 236)"><rect width="420" height="74" rx="12" fill="#080808" stroke="#242424"/><text x="24" y="29" fill="#5c5c5c" font-family="ui-monospace, monospace" font-size="10" letter-spacing="2">04 / OBJECT DETECTION</text><text x="24" y="56" fill="#ededed" font-family="ui-monospace, monospace" font-size="20" font-weight="700" letter-spacing="1.5">YOLO</text><circle cx="391" cy="37" r="3" fill="#7c7c7c"/></g>
-  <g transform="translate(58 332)"><rect width="420" height="74" rx="12" fill="#080808" stroke="#242424"/><text x="24" y="29" fill="#5c5c5c" font-family="ui-monospace, monospace" font-size="10" letter-spacing="2">05 / VERSION CONTROL</text><text x="24" y="56" fill="#ededed" font-family="ui-monospace, monospace" font-size="20" font-weight="700" letter-spacing="1.5">GIT / GITHUB</text><circle cx="391" cy="37" r="3" fill="#7c7c7c"/></g>
-  <g transform="translate(510 332)"><rect width="420" height="74" rx="12" fill="#080808" stroke="#242424"/><text x="24" y="29" fill="#5c5c5c" font-family="ui-monospace, monospace" font-size="10" letter-spacing="2">06 / DEVELOPMENT ENV</text><text x="24" y="56" fill="#ededed" font-family="ui-monospace, monospace" font-size="20" font-weight="700" letter-spacing="1.5">LINUX</text><circle cx="391" cy="37" r="3" fill="#7c7c7c"/></g>
-  <g transform="translate(58 428)"><rect width="420" height="74" rx="12" fill="#080808" stroke="#242424"/><text x="24" y="29" fill="#5c5c5c" font-family="ui-monospace, monospace" font-size="10" letter-spacing="2">07 / CONTAINERS</text><text x="24" y="56" fill="#ededed" font-family="ui-monospace, monospace" font-size="20" font-weight="700" letter-spacing="1.5">DOCKER</text><circle cx="391" cy="37" r="3" fill="#7c7c7c"/></g>
-  <g transform="translate(510 428)"><rect width="420" height="74" rx="12" fill="#080808" stroke="#242424"/><text x="24" y="29" fill="#5c5c5c" font-family="ui-monospace, monospace" font-size="10" letter-spacing="2">08 / CORE DOMAINS</text><text x="24" y="56" fill="#ededed" font-family="ui-monospace, monospace" font-size="20" font-weight="700" letter-spacing="1.5">ML / DL / CV</text><circle cx="391" cy="37" r="3" fill="#7c7c7c"/></g>
+  <g transform="translate(52 132)">
+    <rect width="430" height="92" rx="13" fill="#090C10" stroke="#20262E"/>
+    <text x="24" y="30" fill="#626D79" font-family="ui-monospace, monospace" font-size="9.5" letter-spacing="2">01 / CORE</text>
+    <text x="24" y="64" fill="#E5EAF0" font-family="ui-monospace, monospace" font-size="20" font-weight="700" letter-spacing="1.5">PYTHON</text>
+    <circle cx="398" cy="46" r="2.8" fill="#88929E"/>
+  </g>
+
+  <g transform="translate(518 132)">
+    <rect width="430" height="92" rx="13" fill="#090C10" stroke="#20262E"/>
+    <text x="24" y="30" fill="#626D79" font-family="ui-monospace, monospace" font-size="9.5" letter-spacing="2">02 / AI &amp; DEEP LEARNING</text>
+    <text x="24" y="64" fill="#E5EAF0" font-family="ui-monospace, monospace" font-size="20" font-weight="700" letter-spacing="1.5">PYTORCH · YOLO</text>
+    <circle cx="398" cy="46" r="2.8" fill="#88929E"/>
+  </g>
+
+  <g transform="translate(52 246)">
+    <rect width="430" height="92" rx="13" fill="#090C10" stroke="#20262E"/>
+    <text x="24" y="30" fill="#626D79" font-family="ui-monospace, monospace" font-size="9.5" letter-spacing="2">03 / COMPUTER VISION</text>
+    <text x="24" y="64" fill="#E5EAF0" font-family="ui-monospace, monospace" font-size="20" font-weight="700" letter-spacing="1.5">OPENCV</text>
+    <circle cx="398" cy="46" r="2.8" fill="#88929E"/>
+  </g>
+
+  <g transform="translate(518 246)">
+    <rect width="430" height="92" rx="13" fill="#090C10" stroke="#20262E"/>
+    <text x="24" y="30" fill="#626D79" font-family="ui-monospace, monospace" font-size="9.5" letter-spacing="2">04 / ENGINEERING SYSTEMS</text>
+    <text x="24" y="64" fill="#E5EAF0" font-family="ui-monospace, monospace" font-size="17.5" font-weight="700" letter-spacing="1.1">GIT · GITHUB · LINUX · DOCKER</text>
+    <circle cx="398" cy="46" r="2.8" fill="#88929E"/>
+  </g>
 </svg>

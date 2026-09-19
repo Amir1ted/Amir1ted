@@ -1,26 +1,34 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="1000" height="420" viewBox="0 0 1000 420" role="img" aria-label="AMIR identity">
-  <rect width="1000" height="420" rx="24" fill="#050505"/>
-  <rect x="38" y="38" width="924" height="344" rx="18" fill="#080808" stroke="#252525"/>
-  <g>
-    <text x="80" y="104" fill="#5f5f5f" font-family="ui-monospace, monospace" font-size="12" letter-spacing="3">PROFILE / 001</text>
-    <text x="80" y="172" fill="#f2f2f2" font-family="Georgia, serif" font-size="58" font-weight="700" letter-spacing="6">AMIR</text>
-    <text x="80" y="207" fill="#a0a0a0" font-family="ui-monospace, monospace" font-size="15" letter-spacing="2">COMPUTER ENGINEERING STUDENT</text>
-    <path d="M80 236H458" stroke="#2d2d2d"/>
-    <text x="80" y="277" fill="#d4d4d4" font-family="ui-monospace, monospace" font-size="14">LOCATION</text>
-    <text x="210" y="277" fill="#767676" font-family="ui-monospace, monospace" font-size="14">IRAN</text>
-    <text x="80" y="311" fill="#d4d4d4" font-family="ui-monospace, monospace" font-size="14">PRIMARY</text>
-    <text x="210" y="311" fill="#767676" font-family="ui-monospace, monospace" font-size="14">PYTHON</text>
-    <text x="80" y="345" fill="#d4d4d4" font-family="ui-monospace, monospace" font-size="14">FOCUS</text>
-    <text x="210" y="345" fill="#767676" font-family="ui-monospace, monospace" font-size="14">AI · ML · COMPUTER VISION</text>
+<svg xmlns="http://www.w3.org/2000/svg" width="1000" height="350" viewBox="0 0 1000 350" role="img" aria-labelledby="title desc">
+  <title id="title">Identity</title>
+  <desc id="desc">Computer engineering student focused on AI, machine learning and computer vision.</desc>
+  <rect width="1000" height="350" rx="22" fill="#05070A"/>
+  <rect x="38" y="38" width="924" height="274" rx="16" fill="#090C10" stroke="#20262E"/>
+
+  <g font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace">
+    <text x="76" y="87" fill="#626C78" font-size="10" letter-spacing="3">PROFILE / 001</text>
+    <text x="76" y="136" fill="#E7ECF2" font-family="Georgia, 'Times New Roman', serif" font-size="38" font-weight="700" letter-spacing="3">AMIRHOSSEIN</text>
+    <path d="M76 157H448" stroke="#222932"/>
+
+    <text x="76" y="194" fill="#C2C9D1" font-size="11" letter-spacing="1.6">ROLE</text>
+    <text x="190" y="194" fill="#7D8793" font-size="11" letter-spacing="1.2">COMPUTER ENGINEERING STUDENT</text>
+
+    <text x="76" y="229" fill="#C2C9D1" font-size="11" letter-spacing="1.6">FOCUS</text>
+    <text x="190" y="229" fill="#7D8793" font-size="11" letter-spacing="1.2">AI · MACHINE LEARNING · COMPUTER VISION</text>
+
+    <text x="76" y="264" fill="#C2C9D1" font-size="11" letter-spacing="1.6">PRIMARY</text>
+    <text x="190" y="264" fill="#7D8793" font-size="11" letter-spacing="1.2">PYTHON · PYTORCH · OPENCV</text>
   </g>
-  <g transform="translate(535 74)">
-    <rect width="365" height="270" rx="14" fill="#050505" stroke="#1f1f1f"/>
-    <text x="28" y="42" fill="#666666" font-family="ui-monospace, monospace" font-size="11" letter-spacing="3">OPERATING PRINCIPLE</text>
-    <text x="28" y="93" fill="#e8e8e8" font-family="Georgia, serif" font-size="29">I build systems</text>
-    <text x="28" y="130" fill="#e8e8e8" font-family="Georgia, serif" font-size="29">that learn to see,</text>
-    <text x="28" y="167" fill="#e8e8e8" font-family="Georgia, serif" font-size="29">reason &amp; improve.</text>
-    <path d="M28 196H337" stroke="#242424"/>
-    <text x="28" y="229" fill="#6e6e6e" font-family="ui-monospace, monospace" font-size="12">DATA → MODELS → VISION → SYSTEMS</text>
-    <circle cx="329" cy="33" r="3" fill="#d8d8d8"><animate attributeName="opacity" values=".25;1;.25" dur="3.2s" repeatCount="indefinite"/></circle>
+
+  <g transform="translate(520 67)">
+    <rect width="392" height="216" rx="14" fill="#070A0E" stroke="#1B2129"/>
+    <text x="28" y="40" fill="#5F6975" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="9.5" letter-spacing="2.6">ENGINEERING PRINCIPLE</text>
+    <text x="28" y="91" fill="#E4E9EF" font-family="Georgia, 'Times New Roman', serif" font-size="24">Build systems that turn</text>
+    <text x="28" y="124" fill="#E4E9EF" font-family="Georgia, 'Times New Roman', serif" font-size="24">data into useful,</text>
+    <text x="28" y="157" fill="#E4E9EF" font-family="Georgia, 'Times New Roman', serif" font-size="24">deployable software.</text>
+    <path d="M28 179H364" stroke="#20262E"/>
+    <text x="28" y="201" fill="#636E7A" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="9.5" letter-spacing="1.5">BUILD → MEASURE → ITERATE</text>
+    <circle cx="354" cy="32" r="2.7" fill="#D5DBE2">
+      <animate attributeName="opacity" values=".25;.9;.25" dur="4.8s" repeatCount="indefinite"/>
+    </circle>
   </g>
 </svg>

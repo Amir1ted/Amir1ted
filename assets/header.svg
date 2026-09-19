@@ -1,37 +1,45 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="1000" height="310" viewBox="0 0 1000 310" role="img" aria-label="AMIR">
+<svg xmlns="http://www.w3.org/2000/svg" width="1000" height="292" viewBox="0 0 1000 292" role="img" aria-labelledby="title desc">
+  <title id="title">AMIR</title>
+  <desc id="desc">Computer engineering, artificial intelligence, machine learning and computer vision.</desc>
   <defs>
     <linearGradient id="shine" x1="-1" y1="0" x2="0" y2="0">
-      <stop offset="0%" stop-color="#3b3b3b"/>
-      <stop offset="42%" stop-color="#8e8e8e"/>
-      <stop offset="50%" stop-color="#ffffff"/>
-      <stop offset="58%" stop-color="#8e8e8e"/>
-      <stop offset="100%" stop-color="#3b3b3b"/>
-      <animate attributeName="x1" values="-1;1" dur="5.5s" repeatCount="indefinite" />
-      <animate attributeName="x2" values="0;2" dur="5.5s" repeatCount="indefinite" />
+      <stop offset="0%" stop-color="#3B424C"/>
+      <stop offset="44%" stop-color="#8B949E"/>
+      <stop offset="50%" stop-color="#F8FAFC"/>
+      <stop offset="56%" stop-color="#8B949E"/>
+      <stop offset="100%" stop-color="#3B424C"/>
+      <animate attributeName="x1" values="-1;1" dur="9s" repeatCount="indefinite"/>
+      <animate attributeName="x2" values="0;2" dur="9s" repeatCount="indefinite"/>
     </linearGradient>
     <radialGradient id="halo">
-      <stop offset="0%" stop-color="#ffffff" stop-opacity="0.10"/>
-      <stop offset="65%" stop-color="#ffffff" stop-opacity="0.02"/>
-      <stop offset="100%" stop-color="#000000" stop-opacity="0"/>
+      <stop offset="0%" stop-color="#E6EDF3" stop-opacity="0.085"/>
+      <stop offset="58%" stop-color="#E6EDF3" stop-opacity="0.018"/>
+      <stop offset="100%" stop-color="#05070A" stop-opacity="0"/>
     </radialGradient>
-    <linearGradient id="fadeLine" x1="0" y1="0" x2="1" y2="0">
-      <stop offset="0%" stop-color="#111111"/>
-      <stop offset="50%" stop-color="#777777"/>
-      <stop offset="100%" stop-color="#111111"/>
+    <linearGradient id="line" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#151A21"/>
+      <stop offset="50%" stop-color="#626C78"/>
+      <stop offset="100%" stop-color="#151A21"/>
     </linearGradient>
   </defs>
-  <rect width="1000" height="310" rx="24" fill="#050505"/>
-  <ellipse cx="500" cy="126" rx="390" ry="130" fill="url(#halo)"/>
-  <g opacity="0.55">
-    <path d="M70 58H300 M700 58H930 M70 252H300 M700 252H930" stroke="#303030"/>
-    <path d="M85 77H230 M770 77H915 M85 233H230 M770 233H915" stroke="#171717"/>
-    <circle cx="62" cy="58" r="3" fill="#8b8b8b"><animate attributeName="opacity" values=".2;1;.2" dur="3.8s" repeatCount="indefinite"/></circle>
-    <circle cx="938" cy="58" r="3" fill="#8b8b8b"><animate attributeName="opacity" values="1;.2;1" dur="4.2s" repeatCount="indefinite"/></circle>
-    <circle cx="62" cy="252" r="3" fill="#8b8b8b"><animate attributeName="opacity" values=".3;.9;.3" dur="5s" repeatCount="indefinite"/></circle>
-    <circle cx="938" cy="252" r="3" fill="#8b8b8b"><animate attributeName="opacity" values=".9;.3;.9" dur="4.6s" repeatCount="indefinite"/></circle>
+
+  <rect width="1000" height="292" rx="22" fill="#05070A"/>
+  <rect x="1" y="1" width="998" height="290" rx="21" fill="none" stroke="#151A21"/>
+  <ellipse cx="500" cy="124" rx="360" ry="118" fill="url(#halo)"/>
+
+  <g opacity="0.68" fill="none">
+    <path d="M76 54H286 M714 54H924" stroke="#252C35"/>
+    <path d="M76 238H286 M714 238H924" stroke="#171C22"/>
+    <circle cx="64" cy="54" r="2.5" fill="#8B949E">
+      <animate attributeName="opacity" values=".24;.82;.24" dur="5.6s" repeatCount="indefinite"/>
+    </circle>
+    <circle cx="936" cy="54" r="2.5" fill="#8B949E">
+      <animate attributeName="opacity" values=".75;.22;.75" dur="6.4s" repeatCount="indefinite"/>
+    </circle>
   </g>
-  <text x="500" y="157" text-anchor="middle" fill="url(#shine)" font-family="Georgia, 'Times New Roman', serif" font-size="118" font-weight="700" letter-spacing="18">AMIR</text>
-  <text x="500" y="211" text-anchor="middle" fill="#b9b9b9" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="17" letter-spacing="4">BUILDING INTELLIGENCE FROM DATA &amp; VISION</text>
-  <path d="M310 232H690" stroke="url(#fadeLine)"/>
-  <text x="500" y="265" text-anchor="middle" fill="#626262" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="11" letter-spacing="3">ARTIFICIAL INTELLIGENCE · MACHINE LEARNING · COMPUTER VISION</text>
+
+  <text x="500" y="153" text-anchor="middle" fill="url(#shine)" font-family="Georgia, 'Times New Roman', serif" font-size="114" font-weight="700" letter-spacing="18">AMIR</text>
+  <text x="500" y="198" text-anchor="middle" fill="#AAB2BC" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="14" letter-spacing="4">COMPUTER ENGINEERING · AI / ML DEVELOPMENT</text>
+  <path d="M312 219H688" stroke="url(#line)"/>
+  <text x="500" y="251" text-anchor="middle" fill="#66717D" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="10.5" letter-spacing="3">BUILDING INTELLIGENT SYSTEMS FROM DATA &amp; VISION</text>
 </svg>

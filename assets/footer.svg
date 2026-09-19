@@ -1,6 +1,8 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="1000" height="120" viewBox="0 0 1000 120">
-  <rect width="1000" height="120" rx="24" fill="#050505"/>
-  <path d="M130 50H410 M590 50H870" stroke="#202020"/>
-  <circle cx="500" cy="50" r="4" fill="#d8d8d8"><animate attributeName="opacity" values=".25;1;.25" dur="3.6s" repeatCount="indefinite"/></circle>
-  <text x="500" y="91" text-anchor="middle" fill="#555555" font-family="ui-monospace, monospace" font-size="10" letter-spacing="4">END OF SIGNAL // AMIR1TED</text>
+<svg xmlns="http://www.w3.org/2000/svg" width="1000" height="96" viewBox="0 0 1000 96" role="img" aria-label="End of signal — amirhosse1n">
+  <rect width="1000" height="96" rx="22" fill="#05070A"/>
+  <path d="M146 39H430 M570 39H854" stroke="#1D232B"/>
+  <circle cx="500" cy="39" r="3" fill="#C5CCD4">
+    <animate attributeName="opacity" values=".24;.9;.24" dur="5.4s" repeatCount="indefinite"/>
+  </circle>
+  <text x="500" y="70" text-anchor="middle" fill="#58626E" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="9.5" letter-spacing="3.6">END OF SIGNAL // AMIRHOSSE1N</text>
 </svg>
